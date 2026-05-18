@@ -573,7 +573,7 @@
       { title: 'Use Cases & Examples', desc: 'Real-world AI implementations and governance', url: 'use-cases.html' },
       { title: 'Resources', desc: 'Glossary, Decision Tree, Checklist', url: 'resources.html' },
       { title: 'Vendor Assessment Pack', desc: 'Tools for reviewing third-party AI software', url: 'packs.html#vendor-pack' },
-      { title: 'AI System Inventory', desc: 'Template to map your organisation\\'s AI usage', url: 'packs.html#starter-pack' },
+      { title: 'AI System Inventory', desc: 'Template to map your organisation\'s AI usage', url: 'packs.html#starter-pack' },
       { title: 'Official EU Sources', desc: 'Links to actual EU legislation and guidelines', url: 'official-sources.html' },
       { title: 'Community', desc: 'Join the discussion and contribute', url: 'community.html' },
       { title: 'Maintainer', desc: 'About Artem Nazarko', url: 'maintainer.html' }
