@@ -215,12 +215,24 @@
       const href = link.getAttribute('href');
       if (!href) return;
 
-      if (href.startsWith('../toolkit/')) {
-        const path = href.substring('../toolkit/'.length);
-        link.setAttribute('href', 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/' + path);
-      } else if (href.startsWith('../.github/')) {
-        const path = href.substring('../.github/'.length);
-        link.setAttribute('href', 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/' + path);
+      // Only rewrite relative links pointing to documents/files
+      const isRelative = !href.startsWith('http://') && !href.startsWith('https://') && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:');
+      const isDocument = href.endsWith('.md') || href.endsWith('.csv') || href.endsWith('.pdf') || href.endsWith('.png') || href.endsWith('.jpg') || href.endsWith('.jpeg');
+
+      if (isRelative && isDocument) {
+        let newHref = href;
+        if (href.startsWith('../toolkit/')) {
+          newHref = 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/' + href.substring('../toolkit/'.length);
+        } else if (href.startsWith('../.github/')) {
+          newHref = 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/' + href.substring('../.github/'.length);
+        } else if (href.startsWith('../')) {
+          newHref = 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/' + href.substring('../'.length);
+        } else if (href.startsWith('guide/')) {
+          newHref = 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/guide/' + href.substring('guide/'.length);
+        } else {
+          newHref = 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/' + href;
+        }
+        link.setAttribute('href', newHref);
       }
     });
   }
