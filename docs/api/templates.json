@@ -1,578 +1,1427 @@
 [
   {
     "id": "ai-tool-owner-checklist",
-    "name": "ai tool owner checklist",
+    "name": "Ai Tool Owner Checklist",
     "path": "toolkit/checklists/ai-tool-owner-checklist.md",
+    "category": "checklist",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/checklists/ai-tool-owner-checklist.md"
   },
   {
     "id": "ai-tool-procurement-checklist",
-    "name": "ai tool procurement checklist",
+    "name": "Ai Tool Procurement Checklist",
     "path": "toolkit/checklists/ai-tool-procurement-checklist.md",
+    "category": "checklist",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/checklists/ai-tool-procurement-checklist.md"
   },
   {
     "id": "internal-ai-use-checklist",
-    "name": "internal ai use checklist",
+    "name": "Internal Ai Use Checklist",
     "path": "toolkit/checklists/internal-ai-use-checklist.md",
+    "category": "checklist",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/checklists/internal-ai-use-checklist.md"
   },
   {
     "id": "sme-ai-act-readiness-checklist",
-    "name": "sme ai act readiness checklist",
+    "name": "Sme Ai Act Readiness Checklist",
     "path": "toolkit/checklists/sme-ai-act-readiness-checklist.md",
+    "category": "checklist",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/checklists/sme-ai-act-readiness-checklist.md"
   },
   {
     "id": "toolkit-note-artemhobotun-27",
-    "name": "toolkit note artemhobotun 27",
+    "name": "Toolkit Note Artemhobotun 27",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-27.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-27.md"
   },
   {
     "id": "toolkit-note-artemhobotun-28",
-    "name": "toolkit note artemhobotun 28",
+    "name": "Toolkit Note Artemhobotun 28",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-28.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-28.md"
   },
   {
     "id": "toolkit-note-artemhobotun-29",
-    "name": "toolkit note artemhobotun 29",
+    "name": "Toolkit Note Artemhobotun 29",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-29.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-29.md"
   },
   {
     "id": "toolkit-note-artemhobotun-30",
-    "name": "toolkit note artemhobotun 30",
+    "name": "Toolkit Note Artemhobotun 30",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-30.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-30.md"
   },
   {
     "id": "toolkit-note-artemhobotun-31",
-    "name": "toolkit note artemhobotun 31",
+    "name": "Toolkit Note Artemhobotun 31",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-31.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-31.md"
   },
   {
     "id": "toolkit-note-artemhobotun-32",
-    "name": "toolkit note artemhobotun 32",
+    "name": "Toolkit Note Artemhobotun 32",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-32.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-32.md"
   },
   {
     "id": "toolkit-note-artemhobotun-33",
-    "name": "toolkit note artemhobotun 33",
+    "name": "Toolkit Note Artemhobotun 33",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-33.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-33.md"
   },
   {
     "id": "toolkit-note-artemhobotun-34",
-    "name": "toolkit note artemhobotun 34",
+    "name": "Toolkit Note Artemhobotun 34",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-34.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-34.md"
   },
   {
     "id": "toolkit-note-artemhobotun-35",
-    "name": "toolkit note artemhobotun 35",
+    "name": "Toolkit Note Artemhobotun 35",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-35.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-35.md"
   },
   {
     "id": "toolkit-note-artemhobotun-36",
-    "name": "toolkit note artemhobotun 36",
+    "name": "Toolkit Note Artemhobotun 36",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-36.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-36.md"
   },
   {
     "id": "toolkit-note-artemhobotun-37",
-    "name": "toolkit note artemhobotun 37",
+    "name": "Toolkit Note Artemhobotun 37",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-37.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-37.md"
   },
   {
     "id": "toolkit-note-artemhobotun-38",
-    "name": "toolkit note artemhobotun 38",
+    "name": "Toolkit Note Artemhobotun 38",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-38.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-38.md"
   },
   {
     "id": "toolkit-note-artemhobotun-39",
-    "name": "toolkit note artemhobotun 39",
+    "name": "Toolkit Note Artemhobotun 39",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-39.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-39.md"
   },
   {
     "id": "toolkit-note-artemhobotun-40",
-    "name": "toolkit note artemhobotun 40",
+    "name": "Toolkit Note Artemhobotun 40",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-40.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-40.md"
   },
   {
     "id": "toolkit-note-artemhobotun-41",
-    "name": "toolkit note artemhobotun 41",
+    "name": "Toolkit Note Artemhobotun 41",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-41.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-41.md"
   },
   {
     "id": "toolkit-note-artemhobotun-42",
-    "name": "toolkit note artemhobotun 42",
+    "name": "Toolkit Note Artemhobotun 42",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-42.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-42.md"
   },
   {
     "id": "toolkit-note-artemhobotun-43",
-    "name": "toolkit note artemhobotun 43",
+    "name": "Toolkit Note Artemhobotun 43",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-43.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-43.md"
   },
   {
     "id": "toolkit-note-artemhobotun-44",
-    "name": "toolkit note artemhobotun 44",
+    "name": "Toolkit Note Artemhobotun 44",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-44.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-44.md"
   },
   {
     "id": "toolkit-note-artemhobotun-45",
-    "name": "toolkit note artemhobotun 45",
+    "name": "Toolkit Note Artemhobotun 45",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-45.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-45.md"
   },
   {
     "id": "toolkit-note-artemhobotun-46",
-    "name": "toolkit note artemhobotun 46",
+    "name": "Toolkit Note Artemhobotun 46",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-46.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-46.md"
   },
   {
     "id": "toolkit-note-artemhobotun-47",
-    "name": "toolkit note artemhobotun 47",
+    "name": "Toolkit Note Artemhobotun 47",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-47.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-47.md"
   },
   {
     "id": "toolkit-note-artemhobotun-48",
-    "name": "toolkit note artemhobotun 48",
+    "name": "Toolkit Note Artemhobotun 48",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-48.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-48.md"
   },
   {
     "id": "toolkit-note-artemhobotun-49",
-    "name": "toolkit note artemhobotun 49",
+    "name": "Toolkit Note Artemhobotun 49",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-49.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-49.md"
   },
   {
     "id": "toolkit-note-artemhobotun-50",
-    "name": "toolkit note artemhobotun 50",
+    "name": "Toolkit Note Artemhobotun 50",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-50.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-50.md"
   },
   {
     "id": "toolkit-note-artemhobotun-51",
-    "name": "toolkit note artemhobotun 51",
+    "name": "Toolkit Note Artemhobotun 51",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-51.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-51.md"
   },
   {
     "id": "toolkit-note-artemhobotun-52",
-    "name": "toolkit note artemhobotun 52",
+    "name": "Toolkit Note Artemhobotun 52",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-52.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-52.md"
   },
   {
     "id": "toolkit-note-artemhobotun-53",
-    "name": "toolkit note artemhobotun 53",
+    "name": "Toolkit Note Artemhobotun 53",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-53.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-53.md"
   },
   {
     "id": "toolkit-note-artemhobotun-54",
-    "name": "toolkit note artemhobotun 54",
+    "name": "Toolkit Note Artemhobotun 54",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-54.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-54.md"
   },
   {
     "id": "toolkit-note-artemhobotun-55",
-    "name": "toolkit note artemhobotun 55",
+    "name": "Toolkit Note Artemhobotun 55",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-55.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-55.md"
   },
   {
     "id": "toolkit-note-artemhobotun-56",
-    "name": "toolkit note artemhobotun 56",
+    "name": "Toolkit Note Artemhobotun 56",
     "path": "toolkit/examples/batch-notes/toolkit-note-artemhobotun-56.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/batch-notes/toolkit-note-artemhobotun-56.md"
   },
   {
     "id": "EXAMPLE_PROGRESS_NOTE",
     "name": "EXAMPLE_PROGRESS_NOTE",
     "path": "toolkit/examples/progress-notes/EXAMPLE_PROGRESS_NOTE.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/progress-notes/EXAMPLE_PROGRESS_NOTE.md"
   },
   {
     "id": "sample-ai-system-inventory",
-    "name": "sample ai system inventory",
+    "name": "Sample Ai System Inventory",
     "path": "toolkit/examples/sample-evidence-pack/sample-ai-system-inventory.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 11, 12",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/sample-evidence-pack/sample-ai-system-inventory.md"
   },
   {
     "id": "sample-ai-use-policy-excerpt",
-    "name": "sample ai use policy excerpt",
+    "name": "Sample Ai Use Policy Excerpt",
     "path": "toolkit/examples/sample-evidence-pack/sample-ai-use-policy-excerpt.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9, 29",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/sample-evidence-pack/sample-ai-use-policy-excerpt.md"
   },
   {
     "id": "sample-maintenance-review-log",
-    "name": "sample maintenance review log",
+    "name": "Sample Maintenance Review Log",
     "path": "toolkit/examples/sample-evidence-pack/sample-maintenance-review-log.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 73",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/sample-evidence-pack/sample-maintenance-review-log.md"
   },
   {
     "id": "sample-risk-screening",
-    "name": "sample risk screening",
+    "name": "Sample Risk Screening",
     "path": "toolkit/examples/sample-evidence-pack/sample-risk-screening.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/sample-evidence-pack/sample-risk-screening.md"
   },
   {
     "id": "sample-vendor-review",
-    "name": "sample vendor review",
+    "name": "Sample Vendor Review",
     "path": "toolkit/examples/sample-evidence-pack/sample-vendor-review.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/sample-evidence-pack/sample-vendor-review.md"
   },
   {
     "id": "ai-enabled-crm-scoring",
-    "name": "ai enabled crm scoring",
+    "name": "Ai Enabled Crm Scoring",
     "path": "toolkit/examples/use-cases/ai-enabled-crm-scoring.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/ai-enabled-crm-scoring.md"
   },
   {
     "id": "customer-support-chatbot",
-    "name": "customer support chatbot",
+    "name": "Customer Support Chatbot",
     "path": "toolkit/examples/use-cases/customer-support-chatbot.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/customer-support-chatbot.md"
   },
   {
     "id": "document-review-assistant",
-    "name": "document review assistant",
+    "name": "Document Review Assistant",
     "path": "toolkit/examples/use-cases/document-review-assistant.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/document-review-assistant.md"
   },
   {
     "id": "hr-candidate-screening",
-    "name": "hr candidate screening",
+    "name": "Hr Candidate Screening",
     "path": "toolkit/examples/use-cases/hr-candidate-screening.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/hr-candidate-screening.md"
   },
   {
     "id": "internal-chatgpt-use",
-    "name": "internal chatgpt use",
+    "name": "Internal Chatgpt Use",
     "path": "toolkit/examples/use-cases/internal-chatgpt-use.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/internal-chatgpt-use.md"
   },
   {
     "id": "marketing-content-generation",
-    "name": "marketing content generation",
+    "name": "Marketing Content Generation",
     "path": "toolkit/examples/use-cases/marketing-content-generation.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/marketing-content-generation.md"
   },
   {
     "id": "vendor-ai-tool-procurement",
-    "name": "vendor ai tool procurement",
+    "name": "Vendor Ai Tool Procurement",
     "path": "toolkit/examples/use-cases/vendor-ai-tool-procurement.md",
+    "category": "example",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/vendor-ai-tool-procurement.md"
   },
   {
+    "id": "copyright-policy-template 2",
+    "name": "GPAI Copyright Training Data Policy",
+    "path": "toolkit/gpai-pack/copyright-policy-template 2.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(c)",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/copyright-policy-template 2.md"
+  },
+  {
     "id": "copyright-policy-template",
-    "name": "copyright policy template",
+    "name": "GPAI Copyright Training Data Policy",
     "path": "toolkit/gpai-pack/copyright-policy-template.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(c)",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/copyright-policy-template.md"
   },
   {
+    "id": "gpai-model-inventory 2",
+    "name": "GPAI Model Inventory",
+    "path": "toolkit/gpai-pack/gpai-model-inventory 2.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(a), Annex XI",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/gpai-model-inventory 2.md"
+  },
+  {
     "id": "gpai-model-inventory",
-    "name": "gpai model inventory",
+    "name": "GPAI Model Inventory",
     "path": "toolkit/gpai-pack/gpai-model-inventory.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(a), Annex XI",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/gpai-model-inventory.md"
   },
   {
+    "id": "systemic-risk-assessment 2",
+    "name": "GPAI Systemic Risk Self-Assessment",
+    "path": "toolkit/gpai-pack/systemic-risk-assessment 2.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 51, 55",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/systemic-risk-assessment 2.md"
+  },
+  {
     "id": "systemic-risk-assessment",
-    "name": "systemic risk assessment",
+    "name": "GPAI Systemic Risk Self-Assessment",
     "path": "toolkit/gpai-pack/systemic-risk-assessment.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 51, 55",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/systemic-risk-assessment.md"
   },
   {
     "id": "technical-documentation-template",
-    "name": "technical documentation template",
+    "name": "GPAI Technical Documentation Template",
     "path": "toolkit/gpai-pack/technical-documentation-template.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(a), Annex XI, Annex XII",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/technical-documentation-template.md"
   },
   {
+    "id": "transparency-disclosure-template 2",
+    "name": "GPAI Downstream Deployer Transparency Disclosure",
+    "path": "toolkit/gpai-pack/transparency-disclosure-template 2.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(b), Article 13, Article 50",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/transparency-disclosure-template 2.md"
+  },
+  {
     "id": "transparency-disclosure-template",
-    "name": "transparency disclosure template",
+    "name": "GPAI Downstream Deployer Transparency Disclosure",
     "path": "toolkit/gpai-pack/transparency-disclosure-template.md",
+    "category": "gpai",
+    "applies_to": [
+      "GPAI"
+    ],
+    "eu_ai_act_article": "Article 53(1)(b), Article 13, Article 50",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/transparency-disclosure-template.md"
   },
   {
     "id": "customer-support-chatbots",
-    "name": "customer support chatbots",
+    "name": "Customer Support Chatbots",
     "path": "toolkit/sector-packs/customer-support-chatbots.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/customer-support-chatbots.md"
   },
   {
     "id": "hr-and-recruitment",
-    "name": "hr and recruitment",
+    "name": "Hr And Recruitment",
     "path": "toolkit/sector-packs/hr-and-recruitment.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/hr-and-recruitment.md"
   },
   {
     "id": "internal-productivity-and-genai",
-    "name": "internal productivity and genai",
+    "name": "Internal Productivity And Genai",
     "path": "toolkit/sector-packs/internal-productivity-and-genai.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/internal-productivity-and-genai.md"
   },
   {
     "id": "legal-and-document-review",
-    "name": "legal and document review",
+    "name": "Legal And Document Review",
     "path": "toolkit/sector-packs/legal-and-document-review.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/legal-and-document-review.md"
   },
   {
     "id": "marketing-and-sales",
-    "name": "marketing and sales",
+    "name": "Marketing And Sales",
     "path": "toolkit/sector-packs/marketing-and-sales.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/marketing-and-sales.md"
   },
   {
     "id": "vendor-procurement-and-saas",
-    "name": "vendor procurement and saas",
+    "name": "Vendor Procurement And Saas",
     "path": "toolkit/sector-packs/vendor-procurement-and-saas.md",
+    "category": "sector-pack",
+    "applies_to": [
+      "Sector-Specific"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/sector-packs/vendor-procurement-and-saas.md"
   },
   {
     "id": "START-HERE",
     "name": "START HERE",
     "path": "toolkit/starter-pack/START-HERE.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/START-HERE.md"
   },
   {
     "id": "ai-literacy-session-outline",
-    "name": "ai literacy session outline",
+    "name": "Ai Literacy Session Outline",
     "path": "toolkit/starter-pack/internal-rollout/ai-literacy-session-outline.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 4",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/internal-rollout/ai-literacy-session-outline.md"
   },
   {
     "id": "employee-ai-use-quick-guide",
-    "name": "employee ai use quick guide",
+    "name": "Employee Ai Use Quick Guide",
     "path": "toolkit/starter-pack/internal-rollout/employee-ai-use-quick-guide.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/internal-rollout/employee-ai-use-quick-guide.md"
   },
   {
     "id": "internal-ai-use-announcement-email",
-    "name": "internal ai use announcement email",
+    "name": "Internal Ai Use Announcement Email",
     "path": "toolkit/starter-pack/internal-rollout/internal-ai-use-announcement-email.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/internal-rollout/internal-ai-use-announcement-email.md"
   },
   {
     "id": "ai-governance-owner-role",
-    "name": "ai governance owner role",
+    "name": "Ai Governance Owner Role",
     "path": "toolkit/starter-pack/management/ai-governance-owner-role.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/management/ai-governance-owner-role.md"
   },
   {
     "id": "management-briefing-template",
-    "name": "management briefing template",
+    "name": "Management Briefing Template",
     "path": "toolkit/starter-pack/management/management-briefing-template.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/management/management-briefing-template.md"
   },
   {
     "id": "quarterly-ai-review-agenda",
-    "name": "quarterly ai review agenda",
+    "name": "Quarterly Ai Review Agenda",
     "path": "toolkit/starter-pack/management/quarterly-ai-review-agenda.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/management/quarterly-ai-review-agenda.md"
   },
   {
     "id": "30-minute-readiness-self-assessment",
-    "name": "30 minute readiness self assessment",
+    "name": "30 Minute Readiness Self Assessment",
     "path": "toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9, 10",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/30-minute-readiness-self-assessment.md"
   },
   {
     "id": "ai-tool-inventory-starter",
-    "name": "ai tool inventory starter",
+    "name": "Ai Tool Inventory Starter",
     "path": "toolkit/starter-pack/printable/ai-tool-inventory-starter.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 11, 12",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/ai-tool-inventory-starter.md"
   },
   {
     "id": "basic-risk-screening-starter",
-    "name": "basic risk screening starter",
+    "name": "Basic Risk Screening Starter",
     "path": "toolkit/starter-pack/printable/basic-risk-screening-starter.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/basic-risk-screening-starter.md"
   },
   {
     "id": "evidence-folder-structure",
-    "name": "evidence folder structure",
+    "name": "Evidence Folder Structure",
     "path": "toolkit/starter-pack/printable/evidence-folder-structure.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/evidence-folder-structure.md"
   },
   {
     "id": "one-page-executive-checklist",
-    "name": "one page executive checklist",
+    "name": "One Page Executive Checklist",
     "path": "toolkit/starter-pack/printable/one-page-executive-checklist.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/one-page-executive-checklist.md"
   },
   {
     "id": "vendor-review-starter",
-    "name": "vendor review starter",
+    "name": "Vendor Review Starter",
     "path": "toolkit/starter-pack/printable/vendor-review-starter.md",
+    "category": "starter",
+    "applies_to": [
+      "All"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/starter-pack/printable/vendor-review-starter.md"
   },
   {
     "id": "ai-incident-log",
-    "name": "ai incident log",
+    "name": "Ai Incident Log",
     "path": "toolkit/templates/ai-incident-log.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 73",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-incident-log.md"
   },
   {
     "id": "ai-risk-screening-form",
-    "name": "ai risk screening form",
+    "name": "Ai Risk Screening Form",
     "path": "toolkit/templates/ai-risk-screening-form.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 9",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-risk-screening-form.md"
   },
   {
     "id": "ai-system-inventory",
-    "name": "ai system inventory",
+    "name": "Ai System Inventory",
     "path": "toolkit/templates/ai-system-inventory.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 11, 12",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-system-inventory.md"
   },
   {
     "id": "ai-use-policy-template",
-    "name": "ai use policy template",
+    "name": "Ai Use Policy Template",
     "path": "toolkit/templates/ai-use-policy-template.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 9, 29",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/ai-use-policy-template.md"
   },
   {
     "id": "employee-ai-literacy-record",
-    "name": "employee ai literacy record",
+    "name": "Employee Ai Literacy Record",
     "path": "toolkit/templates/employee-ai-literacy-record.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 4",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/employee-ai-literacy-record.md"
   },
   {
     "id": "maintenance-review-log",
-    "name": "maintenance review log",
+    "name": "Maintenance Review Log",
     "path": "toolkit/templates/maintenance-review-log.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 73",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/maintenance-review-log.md"
   },
   {
     "id": "vendor-ai-questionnaire",
-    "name": "vendor ai questionnaire",
+    "name": "Vendor Ai Questionnaire",
     "path": "toolkit/templates/vendor-ai-questionnaire.md",
+    "category": "template",
+    "applies_to": [
+      "High-Risk",
+      "General"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/templates/vendor-ai-questionnaire.md"
   },
   {
     "id": "vendor-approval-checklist",
-    "name": "vendor approval checklist",
+    "name": "Vendor Approval Checklist",
     "path": "toolkit/vendor-pack/checklists/vendor-approval-checklist.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/checklists/vendor-approval-checklist.md"
   },
   {
     "id": "vendor-meeting-checklist",
-    "name": "vendor meeting checklist",
+    "name": "Vendor Meeting Checklist",
     "path": "toolkit/vendor-pack/checklists/vendor-meeting-checklist.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/checklists/vendor-meeting-checklist.md"
   },
   {
     "id": "vendor-procurement-workflow",
-    "name": "vendor procurement workflow",
+    "name": "Vendor Procurement Workflow",
     "path": "toolkit/vendor-pack/checklists/vendor-procurement-workflow.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/checklists/vendor-procurement-workflow.md"
   },
   {
     "id": "vendor-red-flags-checklist",
-    "name": "vendor red flags checklist",
+    "name": "Vendor Red Flags Checklist",
     "path": "toolkit/vendor-pack/checklists/vendor-red-flags-checklist.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/checklists/vendor-red-flags-checklist.md"
   },
   {
     "id": "decision-status-guide",
-    "name": "decision status guide",
+    "name": "Decision Status Guide",
     "path": "toolkit/vendor-pack/decision-records/decision-status-guide.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "General",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/decision-records/decision-status-guide.md"
   },
   {
     "id": "internal-vendor-review-request",
-    "name": "internal vendor review request",
+    "name": "Internal Vendor Review Request",
     "path": "toolkit/vendor-pack/email-templates/internal-vendor-review-request.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/email-templates/internal-vendor-review-request.md"
   },
   {
     "id": "vendor-approval-summary-email",
-    "name": "vendor approval summary email",
+    "name": "Vendor Approval Summary Email",
     "path": "toolkit/vendor-pack/email-templates/vendor-approval-summary-email.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/email-templates/vendor-approval-summary-email.md"
   },
   {
     "id": "vendor-document-request-email",
-    "name": "vendor document request email",
+    "name": "Vendor Document Request Email",
     "path": "toolkit/vendor-pack/email-templates/vendor-document-request-email.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/email-templates/vendor-document-request-email.md"
   },
   {
     "id": "vendor-follow-up-email",
-    "name": "vendor follow up email",
+    "name": "Vendor Follow Up Email",
     "path": "toolkit/vendor-pack/email-templates/vendor-follow-up-email.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/email-templates/vendor-follow-up-email.md"
   },
   {
     "id": "example-vendor-review-ai-crm",
-    "name": "example vendor review ai crm",
+    "name": "Example Vendor Review Ai Crm",
     "path": "toolkit/vendor-pack/examples/example-vendor-review-ai-crm.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/examples/example-vendor-review-ai-crm.md"
   },
   {
     "id": "example-vendor-review-internal-copilot",
-    "name": "example vendor review internal copilot",
+    "name": "Example Vendor Review Internal Copilot",
     "path": "toolkit/vendor-pack/examples/example-vendor-review-internal-copilot.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/examples/example-vendor-review-internal-copilot.md"
   },
   {
     "id": "example-vendor-review-support-chatbot",
-    "name": "example vendor review support chatbot",
+    "name": "Example Vendor Review Support Chatbot",
     "path": "toolkit/vendor-pack/examples/example-vendor-review-support-chatbot.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/examples/example-vendor-review-support-chatbot.md"
   },
   {
     "id": "vendor-ai-due-diligence-questionnaire",
-    "name": "vendor ai due diligence questionnaire",
+    "name": "Vendor Ai Due Diligence Questionnaire",
     "path": "toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-ai-due-diligence-questionnaire.md"
   },
   {
     "id": "vendor-contract-review-notes",
-    "name": "vendor contract review notes",
+    "name": "Vendor Contract Review Notes",
     "path": "toolkit/vendor-pack/templates/vendor-contract-review-notes.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-contract-review-notes.md"
   },
   {
     "id": "vendor-decision-record",
-    "name": "vendor decision record",
+    "name": "Vendor Decision Record",
     "path": "toolkit/vendor-pack/templates/vendor-decision-record.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-decision-record.md"
   },
   {
     "id": "vendor-document-request-list",
-    "name": "vendor document request list",
+    "name": "Vendor Document Request List",
     "path": "toolkit/vendor-pack/templates/vendor-document-request-list.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-document-request-list.md"
   },
   {
     "id": "vendor-risk-register",
-    "name": "vendor risk register",
+    "name": "Vendor Risk Register",
     "path": "toolkit/vendor-pack/templates/vendor-risk-register.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 11, 12",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-risk-register.md"
   },
   {
     "id": "vendor-scoring-worksheet",
-    "name": "vendor scoring worksheet",
+    "name": "Vendor Scoring Worksheet",
     "path": "toolkit/vendor-pack/templates/vendor-scoring-worksheet.md",
+    "category": "vendor",
+    "applies_to": [
+      "Deployer",
+      "Provider"
+    ],
+    "eu_ai_act_article": "Article 13, 25",
+    "status": "current",
+    "version": "1.0",
+    "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/vendor-pack/templates/vendor-scoring-worksheet.md"
   }
 ]

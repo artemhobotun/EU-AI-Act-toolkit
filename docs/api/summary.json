@@ -1,0 +1,31 @@
+{
+  "total": 100,
+  "generated_at": "2026-05-18T20:35:27.049Z",
+  "by_category": {
+    "checklist": 4,
+    "example": 43,
+    "gpai": 9,
+    "sector-pack": 6,
+    "starter": 13,
+    "template": 7,
+    "vendor": 18
+  },
+  "by_status": {
+    "current": 100
+  },
+  "by_article": {
+    "General": 51,
+    "Article 13, 25": 22,
+    "Article 11, 12": 4,
+    "Article 9, 29": 2,
+    "Article 73": 3,
+    "Article 9": 6,
+    "Article 53(1)(c)": 2,
+    "Article 53(1)(a), Annex XI": 2,
+    "Article 51, 55": 2,
+    "Article 53(1)(a), Annex XI, Annex XII": 1,
+    "Article 53(1)(b), Article 13, Article 50": 2,
+    "Article 4": 2,
+    "Article 9, 10": 1
+  }
+}

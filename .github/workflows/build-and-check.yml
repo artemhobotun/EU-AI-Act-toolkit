@@ -1,4 +1,4 @@
-name: Build, Check & Lint
+name: Build, Check, Lint & Validate
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
       - 'docs/**/*.html'
       - 'toolkit/**/*.md'
       - 'scratch/build-*.js'
+      - 'scratch/validate-*.js'
   workflow_dispatch:
 
 permissions:
@@ -27,10 +28,13 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Validate front-matter in templates
+        run: node scratch/validate-frontmatter.js
+
       - name: Build Search Index
         run: node scratch/build-search.js
 
-      - name: Build API JSONs
+      - name: Build API JSONs (with front-matter metadata)
         run: node scratch/build-api.js
 
       - name: Check for broken internal links
@@ -42,6 +46,13 @@ jobs:
             --config .markdownlint.json \
             'toolkit/**/*.md' \
             --ignore 'toolkit/**/README.md'
+
+      - name: Check external links in Markdown
+        run: |
+          npx --yes markdown-link-check \
+            --config .mlc-config.json \
+            $(find toolkit -name "*.md" | head -20)
+        continue-on-error: true
 
       - name: Auto-commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5

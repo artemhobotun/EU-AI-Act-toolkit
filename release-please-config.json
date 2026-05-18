@@ -1,0 +1,11 @@
+{
+  "release-type": "simple",
+  "packages": {
+    ".": {
+      "release-type": "simple",
+      "package-name": "eu-ai-act-toolkit",
+      "bump-minor-pre-major": true,
+      "draft": false
+    }
+  }
+}
