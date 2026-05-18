@@ -2,7 +2,7 @@
 
 This guide supports a lightweight "first pass" screening for each AI system/use case. It helps you identify where deeper work may be needed.
 
-Template: [../templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
+Template: [../templates/ai-risk-screening-form.md](../../toolkit/templates/ai-risk-screening-form.md)
 
 ## What This Screening Tries To Answer
 

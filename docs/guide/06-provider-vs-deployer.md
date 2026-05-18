@@ -35,4 +35,4 @@ If you mainly use a third-party tool in-house, you are likely acting as a deploy
 - Fine-tuning a model for your product:
   - role may shift toward provider responsibilities; document what changed and why
 
-Record your role choice in the inventory: [../templates/ai-system-inventory.csv](../templates/ai-system-inventory.csv)
+Record your role choice in the inventory: [../templates/ai-system-inventory.csv](../../toolkit/templates/ai-system-inventory.csv)

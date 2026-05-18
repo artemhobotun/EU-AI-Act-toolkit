@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/../../.." && pwd)"
 ZIP_PATH="$ROOT_DIR/dist/eu-ai-act-sme-starter-pack.zip"
 
 mkdir -p "$ROOT_DIR/dist"
@@ -20,7 +20,7 @@ rm -f "$ZIP_PATH"
   README.md \
   docs/DISCLAIMER.md \
   docs/guide/10-source-notes.md \
-  docs/guide/docs/guide/16-what-to-escalate-for-legal-review.md \
-  docs/guide/docs/guide/17-downloadable-toolkit-pack.md)
+  docs/guide/16-what-to-escalate-for-legal-review.md \
+  docs/guide/17-downloadable-toolkit-pack.md)
 
 printf 'Starter pack ZIP created: %s\n' "$ZIP_PATH"

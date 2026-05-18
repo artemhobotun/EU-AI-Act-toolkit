@@ -4,7 +4,7 @@ The EU AI Act introduces "AI literacy" expectations. This guide helps you set a 
 
 This is intentionally lightweight. You should tailor it to your actual tools and risks.
 
-Record template: [../templates/employee-ai-literacy-record.md](../templates/employee-ai-literacy-record.md)
+Record template: [../templates/employee-ai-literacy-record.md](../../toolkit/templates/employee-ai-literacy-record.md)
 
 ## Minimum Topics To Cover
 
@@ -28,4 +28,4 @@ Record template: [../templates/employee-ai-literacy-record.md](../templates/empl
 - 15 minutes refresh every 6-12 months, or after major tool changes
 - short "approved tools" page + internal policy link
 
-Policy template: [../templates/ai-use-policy-template.md](../templates/ai-use-policy-template.md)
+Policy template: [../templates/ai-use-policy-template.md](../../toolkit/templates/ai-use-policy-template.md)

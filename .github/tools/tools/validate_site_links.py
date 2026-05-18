@@ -105,6 +105,15 @@ def validate_links(docs_path):
             if is_external_link(link) or is_anchor(link) or is_data_uri(link) or is_template_variable(link):
                 continue
 
+            # Block relative links containing "../docs/" because they will result in a 404 on Pages
+            if '../docs/' in link:
+                failed_links.append({
+                    'file': html_file.name,
+                    'link': link,
+                    'target': "FORBIDDEN '../docs/' prefix (use relative link without '../docs/' parent context)"
+                })
+                continue
+
             target = parse_link_path(link, html_file)
             if target is None:
                 continue

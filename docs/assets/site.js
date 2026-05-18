@@ -205,12 +205,33 @@
     }, 3000);
   }
 
+  // Rewrite sibling links to GitHub URLs when hosted on GitHub Pages
+  function rewriteGitHubPagesLinks() {
+    const isGitHubPages = window.location.hostname.endsWith('github.io');
+    if (!isGitHubPages) return;
+
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(function(link) {
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      if (href.startsWith('../toolkit/')) {
+        const path = href.substring('../toolkit/'.length);
+        link.setAttribute('href', 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/' + path);
+      } else if (href.startsWith('../.github/')) {
+        const path = href.substring('../.github/'.length);
+        link.setAttribute('href', 'https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/.github/' + path);
+      }
+    });
+  }
+
   // Initialize all functionality when DOM is ready
   function init() {
     initQuiz();
     initScrollAnimations();
     updateActiveNavigation();
     initCopyLinks();
+    rewriteGitHubPagesLinks();
   }
 
   // Ensure DOM is ready

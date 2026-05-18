@@ -3,7 +3,7 @@
 ## Purpose
 
 SMEs can download or copy templates and maintain completed documents internally.
-For vendor review work, see the optional [Vendor Assessment Pack](../vendor-pack/README.md).
+For vendor review work, see the optional [Vendor Assessment Pack](../../toolkit/vendor-pack/README.md).
 
 ## How to download
 

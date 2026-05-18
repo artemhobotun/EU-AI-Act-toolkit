@@ -9,13 +9,13 @@ Before using anything here, read: [DISCLAIMER.md](DISCLAIMER.md)
 1. Pick one owner (can be part-time):
    - name an accountable person for AI inventory + updates
 2. Create an inventory:
-   - use [../templates/ai-system-inventory.csv](../templates/ai-system-inventory.csv)
+   - use [../templates/ai-system-inventory.csv](../../toolkit/templates/ai-system-inventory.csv)
    - list every AI tool, AI feature, or model you deploy or provide (including pilots)
 3. Do a basic screening for each inventory row:
-   - use [../templates/ai-risk-screening-form.md](../templates/ai-risk-screening-form.md)
+   - use [../templates/ai-risk-screening-form.md](../../toolkit/templates/ai-risk-screening-form.md)
 4. Add 2 controls immediately:
-   - internal usage rules: [../templates/ai-use-policy-template.md](../templates/ai-use-policy-template.md)
-   - procurement gate for new AI tools: [../checklists/ai-tool-procurement-checklist.md](../checklists/ai-tool-procurement-checklist.md)
+   - internal usage rules: [../templates/ai-use-policy-template.md](../../toolkit/templates/ai-use-policy-template.md)
+   - procurement gate for new AI tools: [../checklists/ai-tool-procurement-checklist.md](../../toolkit/checklists/ai-tool-procurement-checklist.md)
 
 ## What To Do First (If You're Busy)
 

@@ -4,11 +4,11 @@ An inventory is the foundation for everything else: you cannot manage obligation
 
 Use the CSV template for speed:
 
-- [../templates/ai-system-inventory.csv](../templates/ai-system-inventory.csv)
+- [../templates/ai-system-inventory.csv](../../toolkit/templates/ai-system-inventory.csv)
 
 If you prefer a written profile per system, use:
 
-- [../templates/ai-system-inventory.md](../templates/ai-system-inventory.md)
+- [../templates/ai-system-inventory.md](../../toolkit/templates/ai-system-inventory.md)
 
 ## What Counts as an "AI System" for This Toolkit
 
