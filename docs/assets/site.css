@@ -1107,6 +1107,27 @@ footer {
   padding: var(--s-16) var(--s-6) var(--s-8);
 }
 
+.simple-footer {
+  margin-top: var(--s-16);
+  padding: var(--s-8) var(--s-4) var(--s-12);
+  border-top: 1px solid var(--border-light);
+  text-align: center;
+  color: var(--text-faint);
+  font-size: var(--text-xs);
+  background: transparent !important;
+}
+.simple-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(255,255,255,0.1);
+  text-underline-offset: 3px;
+  transition: all var(--t-fast);
+}
+.simple-footer a:hover {
+  color: var(--text-secondary);
+  text-decoration-color: rgba(255,255,255,0.4);
+}
+
 .footer-container { max-width: var(--max-w); margin: 0 auto; }
 
 .footer-top {
