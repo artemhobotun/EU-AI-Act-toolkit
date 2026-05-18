@@ -33,6 +33,9 @@ jobs:
       - name: Build API JSONs
         run: node scratch/build-api.js
 
+      - name: Check for broken links
+        run: node scratch/check-links.js
+
       - name: Auto-commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
