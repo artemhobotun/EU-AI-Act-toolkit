@@ -227,6 +227,7 @@ function initCountdown() {
   const minsEl = document.getElementById('countdown-mins');
   const secsEl = document.getElementById('countdown-secs');
   const progressEl = document.getElementById('countdown-progress');
+  const toggleBtn = document.getElementById('btn-next-deadline');
 
   if (!banner || !daysEl || !hoursEl || !minsEl || !secsEl) return;
 
@@ -236,28 +237,52 @@ function initCountdown() {
     { name: 'High-Risk AI System Obligations Apply', date: new Date('2026-08-02T00:00:00Z'), start: new Date('2024-08-01T00:00:00Z') }
   ];
 
+  let activeIndex = -1; // -1 means auto-detect next active deadline
+
   function update() {
     const now = new Date();
-    let currentDead = deadlines.find(d => d.date > now);
-    if (!currentDead) {
-      banner.style.display = 'none';
-      return;
+    let currentDead;
+    
+    if (activeIndex === -1) {
+      currentDead = deadlines.find(d => d.date > now);
+      if (!currentDead) {
+        // Fallback to the last one if all passed
+        currentDead = deadlines[deadlines.length - 1];
+      }
+    } else {
+      currentDead = deadlines[activeIndex];
     }
 
-    banner.style.display = 'flex';
+    banner.style.display = 'block'; // Block display fits our centered, card-based premium layout
     title.textContent = currentDead.name;
     dateEl.textContent = `Target Date: ${currentDead.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
 
     const total = currentDead.date - now;
-    const days = Math.floor(total / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
-    const mins = Math.floor((total / 1000 / 60) % 60);
-    const secs = Math.floor((total / 1000) % 60);
+    const isPast = total < 0;
+    const absTotal = Math.abs(total);
+
+    const days = Math.floor(absTotal / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((absTotal / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((absTotal / 1000 / 60) % 60);
+    const secs = Math.floor((absTotal / 1000) % 60);
 
     daysEl.textContent = String(days).padStart(2, '0');
     hoursEl.textContent = String(hours).padStart(2, '0');
     minsEl.textContent = String(mins).padStart(2, '0');
     secsEl.textContent = String(secs).padStart(2, '0');
+
+    // Muted styles if deadline has passed
+    const units = banner.querySelectorAll('.countdown-unit span');
+    if (isPast) {
+      units.forEach(u => {
+        if (u.id) u.style.color = 'var(--text-muted)';
+      });
+      dateEl.textContent = `Passed on: ${currentDead.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+    } else {
+      units.forEach(u => {
+        if (u.id) u.style.color = 'var(--blue-400)';
+      });
+    }
 
     // Progress percentage
     const startRange = currentDead.date - currentDead.start;
@@ -265,6 +290,23 @@ function initCountdown() {
     const percentage = Math.min(100, Math.max(0, (elapsed / startRange) * 100));
     progressEl.style.width = `${percentage}%`;
   }
+
+  // Interactivity: Cycle through deadlines when clicking toggle button or clicking the card itself
+  function nextDeadline(e) {
+    if (e) e.stopPropagation();
+    if (activeIndex === -1) {
+      const now = new Date();
+      let autoIdx = deadlines.findIndex(d => d.date > now);
+      activeIndex = autoIdx !== -1 ? autoIdx : 0;
+    }
+    activeIndex = (activeIndex + 1) % deadlines.length;
+    update();
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', nextDeadline);
+  }
+  banner.addEventListener('click', nextDeadline);
 
   update();
   setInterval(update, 1000);
