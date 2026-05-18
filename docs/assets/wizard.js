@@ -95,6 +95,45 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let history = [];
+
+  const nodeMapping = {
+    'q1': ['node-prohibited', 'node-high_risk', 'node-gpai', 'node-limited_risk', 'node-minimal_risk'],
+    'q2': ['node-prohibited', 'node-high_risk'],
+    'q3': ['node-high_risk'],
+    'q4': ['node-gpai'],
+    'q5': ['node-limited_risk', 'node-minimal_risk'],
+    'result_prohibited': ['node-prohibited'],
+    'result_high_risk': ['node-high_risk'],
+    'result_gpai': ['node-gpai'],
+    'result_limited_risk': ['node-limited_risk'],
+    'result_minimal_risk': ['node-minimal_risk']
+  };
+
+  function updateVisualTree(stepId) {
+    const nodes = document.querySelectorAll('.tree-node');
+    nodes.forEach(node => {
+      node.style.opacity = '0.25';
+      node.style.borderColor = 'var(--border)';
+      node.style.boxShadow = 'none';
+      node.style.transform = 'scale(1)';
+    });
+
+    const activeNodes = nodeMapping[stepId] || [];
+    activeNodes.forEach(nodeId => {
+      const el = document.getElementById(nodeId);
+      if (el) {
+        if (stepId.startsWith('result_')) {
+          el.style.opacity = '1';
+          el.style.borderColor = 'var(--gold-400)';
+          el.style.boxShadow = '0 0 15px rgba(212, 163, 89, 0.4)';
+          el.style.transform = 'scale(1.06)';
+        } else {
+          el.style.opacity = '0.75';
+          el.style.borderColor = 'var(--blue-400)';
+        }
+      }
+    });
+  }
   
   function renderStep(stepId) {
     wizardContent.innerHTML = '';
@@ -106,6 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const step = steps.find(s => s.id === stepId);
     if (!step) return;
+
+    // Update Visual Tree highlighting
+    updateVisualTree(stepId);
 
     // Update Progress
     const totalSteps = 5; // Approx max depth
@@ -155,6 +197,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const res = results[resultId];
     wizardProgress.innerHTML = `<div class="wizard-dot active" style="background: ${res.color}"></div>`;
     
+    // Highlight exact result node in visual tree
+    updateVisualTree(resultId);
+
     wizardContent.innerHTML = `
       <div class="wizard-step active wizard-result">
         <div class="wizard-result-icon">${res.icon}</div>

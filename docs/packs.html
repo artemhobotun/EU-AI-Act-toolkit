@@ -71,6 +71,17 @@
     <p class="hero-subtitle">
       Structured packages of templates, checklists, and guidance designed for different readiness needs — from a first-time self-assessment to full vendor procurement review.
     </p>
+    <!-- Interactive Progress Tracker -->
+    <div id="packs-progress-container" style="display: none; margin: var(--s-6) auto 0; max-width: 600px; padding: var(--s-4); background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <span style="font-size: var(--text-sm); font-weight: 600; color: #fff;">Compliance Readiness Tasks</span>
+        <span id="packs-progress-text" style="font-size: var(--text-sm); font-weight: 700; color: var(--gold-400);">0/0 Tasks Completed (0%)</span>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; position: relative;">
+        <div id="packs-progress-fill" style="background: linear-gradient(90deg, var(--gold-500), var(--gold-400)); height: 100%; width: 0%; transition: width 0.3s ease;"></div>
+      </div>
+      <p style="margin: 6px 0 0 0; font-size: 11px; color: var(--text-faint); text-align: center;">Mark templates as completed as you implement them to save progress!</p>
+    </div>
     <div class="hero-buttons">
       <a href="quiz.html" class="btn btn-gold btn-lg">Find Your Starting Point →</a>
       <a href="use-cases.html" class="btn btn-secondary btn-lg">See Use Cases</a>

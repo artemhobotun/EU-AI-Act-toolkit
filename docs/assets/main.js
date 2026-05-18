@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearch();
   initGlossary();
   initPrintAndCopy();
+  initCountdown();
 });
 
 /* --- Theme Toggle --- */
@@ -214,4 +215,57 @@ function initPrintAndCopy() {
     
     block.appendChild(copyBtn);
   });
+}
+
+/* --- Compliance Countdown --- */
+function initCountdown() {
+  const banner = document.getElementById('compliance-countdown-banner');
+  const title = document.getElementById('countdown-title');
+  const dateEl = document.getElementById('countdown-date');
+  const daysEl = document.getElementById('countdown-days');
+  const hoursEl = document.getElementById('countdown-hours');
+  const minsEl = document.getElementById('countdown-mins');
+  const secsEl = document.getElementById('countdown-secs');
+  const progressEl = document.getElementById('countdown-progress');
+
+  if (!banner || !daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+  const deadlines = [
+    { name: 'Prohibited Practices Ban (Chapter II)', date: new Date('2025-02-02T00:00:00Z'), start: new Date('2024-08-01T00:00:00Z') },
+    { name: 'General-Purpose AI (GPAI) Rules Apply', date: new Date('2025-08-02T00:00:00Z'), start: new Date('2024-08-01T00:00:00Z') },
+    { name: 'High-Risk AI System Obligations Apply', date: new Date('2026-08-02T00:00:00Z'), start: new Date('2024-08-01T00:00:00Z') }
+  ];
+
+  function update() {
+    const now = new Date();
+    let currentDead = deadlines.find(d => d.date > now);
+    if (!currentDead) {
+      banner.style.display = 'none';
+      return;
+    }
+
+    banner.style.display = 'flex';
+    title.textContent = currentDead.name;
+    dateEl.textContent = `Target Date: ${currentDead.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`;
+
+    const total = currentDead.date - now;
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((total / 1000 / 60) % 60);
+    const secs = Math.floor((total / 1000) % 60);
+
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minsEl.textContent = String(mins).padStart(2, '0');
+    secsEl.textContent = String(secs).padStart(2, '0');
+
+    // Progress percentage
+    const startRange = currentDead.date - currentDead.start;
+    const elapsed = now - currentDead.start;
+    const percentage = Math.min(100, Math.max(0, (elapsed / startRange) * 100));
+    progressEl.style.width = `${percentage}%`;
+  }
+
+  update();
+  setInterval(update, 1000);
 }

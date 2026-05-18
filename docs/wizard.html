@@ -59,6 +59,33 @@
       <div id="wizard-content">
         <!-- Steps injected by JS -->
       </div>
+
+      <!-- Interactive Decision Flowchart Graphic -->
+      <div class="decision-tree-graphic" style="margin-top: var(--s-10); padding-top: var(--s-8); border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: var(--s-6);">
+        <h4 style="margin: 0 0 var(--s-2) 0; font-size: var(--text-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">Visual Decision Pathway</h4>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; width: 100%;">
+          <div id="node-prohibited" class="tree-node" style="flex: 1; min-width: 140px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: rgba(0,0,0,0.2); text-align: center; opacity: 0.3; transition: all 0.3s ease;">
+            <div style="font-size: 20px; margin-bottom: 4px;">🛑</div>
+            <strong style="font-size: 11px; text-transform: uppercase; color: #fff;">Prohibited</strong>
+          </div>
+          <div id="node-high_risk" class="tree-node" style="flex: 1; min-width: 140px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: rgba(0,0,0,0.2); text-align: center; opacity: 0.3; transition: all 0.3s ease;">
+            <div style="font-size: 20px; margin-bottom: 4px;">⚠️</div>
+            <strong style="font-size: 11px; text-transform: uppercase; color: #fff;">High-Risk</strong>
+          </div>
+          <div id="node-gpai" class="tree-node" style="flex: 1; min-width: 140px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: rgba(0,0,0,0.2); text-align: center; opacity: 0.3; transition: all 0.3s ease;">
+            <div style="font-size: 20px; margin-bottom: 4px;">🧠</div>
+            <strong style="font-size: 11px; text-transform: uppercase; color: #fff;">GPAI Model</strong>
+          </div>
+          <div id="node-limited_risk" class="tree-node" style="flex: 1; min-width: 140px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: rgba(0,0,0,0.2); text-align: center; opacity: 0.3; transition: all 0.3s ease;">
+            <div style="font-size: 20px; margin-bottom: 4px;">🤖</div>
+            <strong style="font-size: 11px; text-transform: uppercase; color: #fff;">Limited Risk</strong>
+          </div>
+          <div id="node-minimal_risk" class="tree-node" style="flex: 1; min-width: 140px; padding: 12px; border-radius: 6px; border: 1px solid var(--border); background: rgba(0,0,0,0.2); text-align: center; opacity: 0.3; transition: all 0.3s ease;">
+            <div style="font-size: 20px; margin-bottom: 4px;">✅</div>
+            <strong style="font-size: 11px; text-transform: uppercase; color: #fff;">Minimal Risk</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
 
