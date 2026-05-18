@@ -5,11 +5,11 @@
 - read [README.md](../README.md)
 - read [DISCLAIMER.md](../docs/DISCLAIMER.md)
 - check the [GitHub Pages site](https://artemhobotun.github.io/EU-AI-Act-Toolkit/)
-- search existing issues
+- search existing discussions and issues
 
 ## Where to ask
 
-- GitHub issues for public content or usability questions
+- [GitHub Discussions](https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions) for general questions, help, and community discussions
 - [SECURITY.md](SECURITY.md) for sensitive security or privacy concerns
 - [SUPPORT.md](SUPPORT.md) for general guidance about where to ask
 
@@ -31,7 +31,7 @@
 
 ## Do not share confidential data
 
-Keep personal data, customer data, contracts, security details, and trade secrets out of public issues.
+Keep personal data, customer data, contracts, security details, and trade secrets out of public discussions.
 
 ## Useful links
 
@@ -40,4 +40,4 @@ Keep personal data, customer data, contracts, security details, and trade secret
 - [Starter Pack](../toolkit/starter-pack/README.md)
 - [Disclaimer](../docs/DISCLAIMER.md)
 - [Security Policy](SECURITY.md)
-- [Issues](https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues)
+- [Discussions](https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions)

@@ -86,6 +86,6 @@ Review at least annually or after significant changes:
 
 - Check the [README.md](../../README.md) for quick navigation
 - Review the relevant toolkit pack or checklist
-- Search existing [GitHub issues](https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues)
-- Open a [GitHub issue](https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues/new) for questions about toolkit content or usability
+- Search existing [GitHub discussions](https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions) and issues
+- Ask a question or start a conversation on [GitHub Discussions](https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions/new?category=q-a)
 - See [SUPPORT.md](../../.github/SUPPORT.md) for further guidance

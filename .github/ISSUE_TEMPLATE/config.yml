@@ -1,5 +1,8 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
+  - name: 💬 Ask a Question / Request Help
+    url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions/new?category=q-a
+    about: Ask a general question or get help with the toolkit via GitHub Discussions.
   - name: Disclaimer
     url: https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/docs/DISCLAIMER.md
     about: Read the disclaimer before relying on this toolkit.
