@@ -4,6 +4,18 @@
   <img src="docs/assets/branding/readme-hero-banner.png" alt="EU AI Act Toolkit" width="100%">
 </p>
 
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.20277010">
+    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20277010.svg" alt="DOI">
+  </a>
+  <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/releases/latest">
+    <img src="https://img.shields.io/github/v/release/artemhobotun/EU-AI-Act-Toolkit?color=blue&label=Release" alt="Latest Release">
+  </a>
+  <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions">
+    <img src="https://img.shields.io/github/discussions/artemhobotun/EU-AI-Act-Toolkit?color=purple&label=Discussions" alt="Discussions">
+  </a>
+</p>
+
 Practical templates, checklists, and documentation tools for SMEs working toward EU AI Act readiness.
 
 - 🧩 Organise your AI inventory

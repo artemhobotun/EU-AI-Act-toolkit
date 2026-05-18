@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this toolkit in research or professional work, please cite it."
 title: "EU AI Act Toolkit"
+doi: 10.5281/zenodo.20277010
 abstract: >
   A comprehensive, open-source toolkit providing practical templates, checklists,
   and governance documentation for organisations working toward EU AI Act readiness.
