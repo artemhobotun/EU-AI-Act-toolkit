@@ -55,7 +55,7 @@ jobs:
         continue-on-error: true
 
       - name: Auto-commit generated files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: Auto-update search index and API JSONs"
           file_pattern: "docs/search-index.json docs/api/*.json"
