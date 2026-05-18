@@ -6,13 +6,10 @@
 
 <p align="center">
   <a href="https://doi.org/10.5281/zenodo.20277010">
-    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20277010.svg" alt="DOI">
+    <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20277010-blue.svg" alt="DOI">
   </a>
   <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/releases/latest">
     <img src="https://img.shields.io/github/v/release/artemhobotun/EU-AI-Act-Toolkit?color=blue&label=Release" alt="Latest Release">
-  </a>
-  <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/discussions">
-    <img src="https://img.shields.io/github/discussions/artemhobotun/EU-AI-Act-Toolkit?color=purple&label=Discussions" alt="Discussions">
   </a>
 </p>
 
