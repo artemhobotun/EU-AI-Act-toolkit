@@ -905,8 +905,8 @@ nav a.nav-cta:hover {
 /* ── Profile / Maintainer ─────────────────────── */
 .profile-hero {
   display: flex;
-  align-items: flex-start;
-  gap: var(--s-8);
+  align-items: center;
+  gap: var(--s-10);
   padding: var(--s-8);
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -919,8 +919,8 @@ nav a.nav-cta:hover {
 }
 
 .profile-avatar {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue-600), var(--gold-500));
   display: flex;
