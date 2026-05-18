@@ -59,7 +59,7 @@ let updated = content
 fs.writeFileSync(fullPath, updated, 'utf8');
 
 // Log to TEMPLATE_CHANGELOG.md
-const changelogPath = path.join(process.cwd(), 'TEMPLATE_CHANGELOG.md');
+const changelogPath = path.join(process.cwd(), 'docs', 'TEMPLATE_CHANGELOG.md');
 const rel = path.relative(process.cwd(), fullPath);
 const logEntry = `| ${today} | \`${rel}\` | ${bumpType} bump → **v${newVersion}** | ${reason} |\n`;
 

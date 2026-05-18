@@ -658,20 +658,6 @@
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/vendor-ai-tool-procurement.md"
   },
   {
-    "id": "copyright-policy-template 2",
-    "name": "GPAI Copyright Training Data Policy",
-    "path": "toolkit/gpai-pack/copyright-policy-template 2.md",
-    "category": "gpai",
-    "applies_to": [
-      "GPAI"
-    ],
-    "eu_ai_act_article": "Article 53(1)(c)",
-    "status": "current",
-    "version": "1.0",
-    "last_reviewed": "2026-05",
-    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/copyright-policy-template 2.md"
-  },
-  {
     "id": "copyright-policy-template",
     "name": "GPAI Copyright Training Data Policy",
     "path": "toolkit/gpai-pack/copyright-policy-template.md",
@@ -686,20 +672,6 @@
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/copyright-policy-template.md"
   },
   {
-    "id": "gpai-model-inventory 2",
-    "name": "GPAI Model Inventory",
-    "path": "toolkit/gpai-pack/gpai-model-inventory 2.md",
-    "category": "gpai",
-    "applies_to": [
-      "GPAI"
-    ],
-    "eu_ai_act_article": "Article 53(1)(a), Annex XI",
-    "status": "current",
-    "version": "1.0",
-    "last_reviewed": "2026-05",
-    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/gpai-model-inventory 2.md"
-  },
-  {
     "id": "gpai-model-inventory",
     "name": "GPAI Model Inventory",
     "path": "toolkit/gpai-pack/gpai-model-inventory.md",
@@ -712,20 +684,6 @@
     "version": "1.0",
     "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/gpai-model-inventory.md"
-  },
-  {
-    "id": "systemic-risk-assessment 2",
-    "name": "GPAI Systemic Risk Self-Assessment",
-    "path": "toolkit/gpai-pack/systemic-risk-assessment 2.md",
-    "category": "gpai",
-    "applies_to": [
-      "GPAI"
-    ],
-    "eu_ai_act_article": "Article 51, 55",
-    "status": "current",
-    "version": "1.0",
-    "last_reviewed": "2026-05",
-    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/systemic-risk-assessment 2.md"
   },
   {
     "id": "systemic-risk-assessment",
@@ -754,20 +712,6 @@
     "version": "1.0",
     "last_reviewed": "2026-05",
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/technical-documentation-template.md"
-  },
-  {
-    "id": "transparency-disclosure-template 2",
-    "name": "GPAI Downstream Deployer Transparency Disclosure",
-    "path": "toolkit/gpai-pack/transparency-disclosure-template 2.md",
-    "category": "gpai",
-    "applies_to": [
-      "GPAI"
-    ],
-    "eu_ai_act_article": "Article 53(1)(b), Article 13, Article 50",
-    "status": "current",
-    "version": "1.0",
-    "last_reviewed": "2026-05",
-    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/transparency-disclosure-template 2.md"
   },
   {
     "id": "transparency-disclosure-template",
