@@ -238,12 +238,165 @@
   }
 
   // Initialize all functionality when DOM is ready
+  // ── SPA Page Transitions ────────────────────
+  function initPageTransitions() {
+    const localLinks = document.querySelectorAll('a[href]:not([target="_blank"])');
+    
+    localLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        // Ignore hashes, external links, or JS links
+        if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
+        
+        // Ignore modifier keys
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+        
+        e.preventDefault();
+        
+        // Add transitioning class
+        document.body.classList.add('page-transitioning');
+        
+        // Wait for animation to finish, then navigate
+        setTimeout(() => {
+          window.location.href = href;
+        }, 250); // Matches CSS fadeOutDown duration
+      });
+    });
+  }
+
+  // ── Global Search (Cmd+K) ───────────────────
+  function initGlobalSearch() {
+    // 1. Inject Search Modal HTML
+    const searchHTML = `
+      <div id="search-modal" class="search-modal" role="dialog" aria-modal="true">
+        <div class="search-modal-content">
+          <input type="text" id="search-input" placeholder="Search the toolkit (e.g. 'Vendor', 'Risk', 'Packs')..." autocomplete="off" spellcheck="false">
+          <div id="search-results" class="search-results"></div>
+          <div class="search-footer">
+            <span><kbd>Esc</kbd> to close</span>
+            <span><kbd>↑</kbd> <kbd>↓</kbd> to navigate · <kbd>Enter</kbd> to select</span>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', searchHTML);
+
+    const searchModal = document.getElementById('search-modal');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    
+    // Simple static search index for GitHub Pages
+    const searchIndex = [
+      { title: 'Dashboard', desc: 'Home overview and quick actions', url: 'index.html' },
+      { title: 'Start Self-Check', desc: 'AI Governance readiness quiz', url: 'quiz.html' },
+      { title: 'Toolkit Packs', desc: 'Starter Pack, Vendor Pack, Sector Packs', url: 'packs.html' },
+      { title: 'Use Cases & Examples', desc: 'Real-world AI implementations and governance', url: 'use-cases.html' },
+      { title: 'Resources', desc: 'Glossary, Decision Tree, Checklist', url: 'resources.html' },
+      { title: 'Vendor Assessment Pack', desc: 'Tools for reviewing third-party AI software', url: 'packs.html#vendor-pack' },
+      { title: 'AI System Inventory', desc: 'Template to map your organisation\\'s AI usage', url: 'packs.html#starter-pack' },
+      { title: 'Official EU Sources', desc: 'Links to actual EU legislation and guidelines', url: 'official-sources.html' },
+      { title: 'Community', desc: 'Join the discussion and contribute', url: 'community.html' },
+      { title: 'Maintainer', desc: 'About Artem Nazarko', url: 'maintainer.html' }
+    ];
+
+    let selectedIndex = -1;
+
+    // Toggle Modal
+    function openSearch() {
+      searchModal.classList.add('active');
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('has-results');
+      setTimeout(() => searchInput.focus(), 50);
+    }
+
+    function closeSearch() {
+      searchModal.classList.remove('active');
+      searchInput.blur();
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+        closeSearch();
+      }
+    });
+
+    searchModal.addEventListener('click', (e) => {
+      if (e.target === searchModal) closeSearch();
+    });
+
+    // Handle input and filtering
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      selectedIndex = -1;
+      
+      if (!query) {
+        searchResults.innerHTML = '';
+        searchResults.classList.remove('has-results');
+        return;
+      }
+
+      const results = searchIndex.filter(item => 
+        item.title.toLowerCase().includes(query) || 
+        item.desc.toLowerCase().includes(query)
+      );
+
+      if (results.length > 0) {
+        searchResults.innerHTML = results.map((item, idx) => `
+          <a href="${item.url}" class="search-result-item" data-index="${idx}">
+            <strong>${item.title}</strong>
+            <span>${item.desc}</span>
+          </a>
+        `).join('');
+        searchResults.classList.add('has-results');
+      } else {
+        searchResults.innerHTML = `<div class="search-result-item"><span>No results found for "${query}"</span></div>`;
+        searchResults.classList.add('has-results');
+      }
+    });
+
+    // Keyboard navigation in results
+    searchInput.addEventListener('keydown', (e) => {
+      const items = searchResults.querySelectorAll('a.search-result-item');
+      if (items.length === 0) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        selectedIndex = (selectedIndex + 1) % items.length;
+        updateSelection(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        selectedIndex = selectedIndex - 1 < 0 ? items.length - 1 : selectedIndex - 1;
+        updateSelection(items);
+      } else if (e.key === 'Enter' && selectedIndex >= 0) {
+        e.preventDefault();
+        items[selectedIndex].click();
+      }
+    });
+
+    function updateSelection(items) {
+      items.forEach(item => item.classList.remove('selected'));
+      if (selectedIndex >= 0) {
+        items[selectedIndex].classList.add('selected');
+        items[selectedIndex].scrollIntoView({ block: 'nearest' });
+      }
+    }
+  }
+
   function init() {
     initQuiz();
     initScrollAnimations();
     updateActiveNavigation();
     initCopyLinks();
     rewriteGitHubPagesLinks();
+    initPageTransitions();
+    initGlobalSearch();
   }
 
   // Ensure DOM is ready

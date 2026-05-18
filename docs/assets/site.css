@@ -1114,3 +1114,108 @@ footer {
   .quiz-card { padding: var(--s-6) var(--s-4); }
   .quiz-nav { flex-direction: column; gap: var(--s-3); }
 }
+
+/* ── Global Search Modal (Cmd+K) ──────────────── */
+.search-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 18, 35, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15vh;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-fast);
+}
+
+.search-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-modal-content {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.05);
+  overflow: hidden;
+  transform: translateY(-20px) scale(0.95);
+  transition: transform var(--t-base);
+}
+
+.search-modal.active .search-modal-content {
+  transform: translateY(0) scale(1);
+}
+
+#search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: var(--s-6) var(--s-6);
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+  font-family: var(--font);
+}
+
+#search-input:focus { outline: none; }
+#search-input::placeholder { color: var(--text-faint); }
+
+.search-results {
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  display: none;
+}
+.search-results.has-results { display: block; }
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--s-4) var(--s-6);
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-light);
+  transition: background var(--t-fast);
+}
+
+.search-result-item:last-child { border-bottom: none; }
+.search-result-item:hover, .search-result-item.selected {
+  background: var(--bg-card-hover);
+}
+.search-result-item strong { color: var(--text-primary); margin-bottom: 2px; }
+.search-result-item span { font-size: var(--text-sm); color: var(--text-muted); }
+
+.search-footer {
+  padding: var(--s-3) var(--s-6);
+  border-top: 1px solid var(--border);
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+kbd {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── SPA Page Transitions ────────────────────── */
+body.page-transitioning main > section {
+  animation: fadeOutDown 0.3s cubic-bezier(0.4, 0, 1, 1) forwards !important;
+}
+
+@keyframes fadeOutDown {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(10px); }
+}
