@@ -6,7 +6,7 @@ The EU AI Act Toolkit is a practical collection of templates, checklists, and do
 
 ## Is this toolkit legal advice?
 
-No. The toolkit is educational and informational only. It is not legal advice, does not constitute legal counsel, and should not be treated as a substitute for review by qualified legal professionals. Always escalate sensitive questions to appropriate legal counsel. See [DISCLAIMER.md](../../docs/DISCLAIMER.md).
+No. The toolkit is educational and informational only. It is not legal advice, does not constitute legal counsel, and should not be treated as a substitute for review by qualified legal professionals. Always escalate sensitive questions to appropriate legal counsel. See [DISCLAIMER.md](../DISCLAIMER.md).
 
 ## Will using this toolkit make us compliant with the EU AI Act?
 
@@ -26,8 +26,8 @@ Start with the **Starter Pack**, especially:
 Then review the sector pack relevant to your industry.
 
 You should also review:
-1. Inventory: [docs/guide/04-ai-system-inventory-guide.md](docs/guide/04-ai-system-inventory-guide.md)
-2. Screening: [docs/guide/05-basic-risk-screening.md](docs/guide/05-basic-risk-screening.md)
+1. Inventory: [docs/guide/04-ai-system-inventory-guide.md](04-ai-system-inventory-guide.md)
+2. Screening: [docs/guide/05-basic-risk-screening.md](05-basic-risk-screening.md)
 3. Governance baseline:
    - internal policy: [../../toolkit/templates/ai-use-policy-template.md](../../toolkit/templates/ai-use-policy-template.md)
    - procurement controls: [../../toolkit/checklists/ai-tool-procurement-checklist.md](../../toolkit/checklists/ai-tool-procurement-checklist.md)

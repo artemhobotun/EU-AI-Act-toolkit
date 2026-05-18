@@ -24,6 +24,11 @@ def get_html_files(docs_path):
     return list(docs_path.glob('*.html'))
 
 
+def get_md_files(docs_path):
+    """Get list of MD files in docs directory recursively."""
+    return list(docs_path.rglob('*.md'))
+
+
 def extract_links(html_content):
     """Extract href and src links from HTML content."""
     links = []
@@ -39,9 +44,18 @@ def extract_links(html_content):
     return links
 
 
+def extract_md_links(md_content):
+    """Extract markdown style links [text](url)."""
+    links = []
+    # Matches [text](url) where url does not have parentheses inside, or simply everything in parens
+    for match in re.finditer(r'\[[^\]]*\]\(([^)]+)\)', md_content):
+        links.append(match.group(1))
+    return links
+
+
 def is_external_link(url):
     """Check if URL is an external link (https://, http://, etc.)."""
-    return url.startswith('http://') or url.startswith('https://')
+    return url.startswith('http://') or url.startswith('https://') or url.startswith('mailto:')
 
 
 def is_data_uri(url):
@@ -51,7 +65,7 @@ def is_data_uri(url):
 
 def is_template_variable(url):
     """Check if URL contains a template variable (e.g., ${...})."""
-    return '${' in url or '}}' in url
+    return '${' in url or '}}' in url or '{{' in url
 
 
 def is_anchor(url):
@@ -88,44 +102,52 @@ def parse_link_path(url, base_path):
 
 def validate_links(docs_path):
     """
-    Validate all links in HTML files.
+    Validate all links in HTML and MD files.
 
     Returns tuple: (passed, failed_list)
     """
     html_files = get_html_files(docs_path)
+    md_files = get_md_files(docs_path)
     failed_links = []
 
-    for html_file in sorted(html_files):
-        with open(html_file, 'r', encoding='utf-8') as f:
-            content = f.read()
+    def validate_file_list(files, is_md=False):
+        for file in sorted(files):
+            with open(file, 'r', encoding='utf-8') as f:
+                content = f.read()
 
-        links = extract_links(content)
+            if is_md:
+                links = extract_md_links(content)
+            else:
+                links = extract_links(content)
 
-        for link in links:
-            if is_external_link(link) or is_anchor(link) or is_data_uri(link) or is_template_variable(link):
-                continue
+            for link in links:
+                if is_external_link(link) or is_anchor(link) or is_data_uri(link) or is_template_variable(link):
+                    continue
 
-            # Block relative links containing "../docs/" because they will result in a 404 on Pages
-            if '../docs/' in link:
-                failed_links.append({
-                    'file': html_file.name,
-                    'link': link,
-                    'target': "FORBIDDEN '../docs/' prefix (use relative link without '../docs/' parent context)"
-                })
-                continue
+                # Block relative links containing "../docs/" because they will result in a 404 on Pages
+                if '../docs/' in link:
+                    failed_links.append({
+                        'file': str(file.relative_to(docs_path.parent)),
+                        'link': link,
+                        'target': "FORBIDDEN '../docs/' prefix (use relative link without '../docs/' parent context)"
+                    })
+                    continue
 
-            target = parse_link_path(link, html_file)
-            if target is None:
-                continue
+                target = parse_link_path(link, file)
+                if target is None:
+                    continue
 
-            if not target.exists():
-                failed_links.append({
-                    'file': html_file.name,
-                    'link': link,
-                    'target': target
-                })
+                if not target.exists():
+                    failed_links.append({
+                        'file': str(file.relative_to(docs_path.parent)),
+                        'link': link,
+                        'target': str(target)
+                    })
 
-    passed = len(html_files) > 0 and len(failed_links) == 0
+    validate_file_list(html_files, is_md=False)
+    validate_file_list(md_files, is_md=True)
+
+    passed = (len(html_files) > 0 or len(md_files) > 0) and len(failed_links) == 0
     return passed, failed_links
 
 
@@ -148,7 +170,8 @@ def main():
         sys.exit(1)
     else:
         html_count = len(get_html_files(docs_path))
-        print(f"PASS: All local links valid ({html_count} HTML files checked)")
+        md_count = len(get_md_files(docs_path))
+        print(f"PASS: All local links valid ({html_count} HTML files and {md_count} MD files checked)")
         sys.exit(0)
 
 
