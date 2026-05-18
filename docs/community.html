@@ -246,6 +246,144 @@
     </div>
   </section>
 
+  <!-- Changelog Accordion -->
+  <section>
+    <div class="section-header">
+      <span class="section-label">Release History</span>
+      <h2>Changelog</h2>
+      <p>Every improvement, feature, and fix — documented. Click any version to expand.</p>
+    </div>
+
+    <div class="changelog-accordion">
+
+      <!-- v4.1 -->
+      <details class="cl-accordion-item" open>
+        <summary class="cl-accordion-summary">
+          <div class="cl-accordion-left">
+            <span class="changelog-dot" style="background: var(--green-500); width:10px; height:10px; display:inline-block; border-radius:50%; flex-shrink:0;"></span>
+            <span class="changelog-version" style="background: rgba(16,185,129,0.15); color: var(--green-500);">v4.1.0</span>
+            <span class="cl-accordion-title">Changelog, OG Cards &amp; Link Checker</span>
+            <span class="changelog-badge" style="background: rgba(16,185,129,0.2); color: var(--green-500); font-size:11px; font-weight:600; padding:2px 8px; border-radius:999px;">Latest</span>
+          </div>
+          <div class="cl-accordion-meta">
+            <span class="changelog-date">May 2026</span>
+            <svg class="cl-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </summary>
+        <div class="cl-accordion-body">
+          <ul class="changelog-list">
+            <li><span class="cl-tag feat">feat</span> Changelog accordion embedded in Community page</li>
+            <li><span class="cl-tag feat">feat</span> Open Graph / Twitter Card meta tags on all 11 pages</li>
+            <li><span class="cl-tag feat">feat</span> Link Checker CI step — blocks deploy on broken internal links</li>
+            <li><span class="cl-tag feat">feat</span> <code>scratch/check-links.js</code> — validates 178 internal links</li>
+            <li><span class="cl-tag feat">feat</span> <code>scratch/inject-og.js</code> — automated OG tag injection</li>
+            <li><span class="cl-tag feat">feat</span> SVG OG preview card (1200×630) for social sharing</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- v4.0 -->
+      <details class="cl-accordion-item">
+        <summary class="cl-accordion-summary">
+          <div class="cl-accordion-left">
+            <span class="changelog-dot" style="background: var(--blue-500); width:10px; height:10px; display:inline-block; border-radius:50%; flex-shrink:0;"></span>
+            <span class="changelog-version" style="background: rgba(76,130,255,0.15); color: var(--blue-500);">v4.0.0</span>
+            <span class="cl-accordion-title">Repo Automation &amp; Open Source Platform</span>
+          </div>
+          <div class="cl-accordion-meta">
+            <span class="changelog-date">May 2026</span>
+            <svg class="cl-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </summary>
+        <div class="cl-accordion-body">
+          <ul class="changelog-list">
+            <li><span class="cl-tag feat">feat</span> GitHub Actions CI/CD — auto-builds search index &amp; API on every push</li>
+            <li><span class="cl-tag feat">feat</span> Public JSON API at <code>/api/glossary.json</code> and <code>/api/templates.json</code></li>
+            <li><span class="cl-tag feat">feat</span> Print PDF button with <code>@media print</code> stylesheet</li>
+            <li><span class="cl-tag feat">feat</span> Copy to Clipboard on all code blocks</li>
+            <li><span class="cl-tag feat">feat</span> Language switcher (EN / FR coming soon / DE coming soon)</li>
+            <li><span class="cl-tag feat">feat</span> GitHub Issue Templates for Feature Requests &amp; Bug Reports</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- v3.0 -->
+      <details class="cl-accordion-item">
+        <summary class="cl-accordion-summary">
+          <div class="cl-accordion-left">
+            <span class="changelog-dot" style="background: var(--purple-500); width:10px; height:10px; display:inline-block; border-radius:50%; flex-shrink:0;"></span>
+            <span class="changelog-version" style="background: var(--purple-100); color: var(--purple-500);">v3.0.0</span>
+            <span class="cl-accordion-title">SaaS Platform Launch</span>
+          </div>
+          <div class="cl-accordion-meta">
+            <span class="changelog-date">May 2026</span>
+            <svg class="cl-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </summary>
+        <div class="cl-accordion-body">
+          <ul class="changelog-list">
+            <li><span class="cl-tag feat">feat</span> Global search modal (Cmd+K) with auto-generated search index</li>
+            <li><span class="cl-tag feat">feat</span> Dark/Light mode toggle with <code>localStorage</code> persistence</li>
+            <li><span class="cl-tag feat">feat</span> Applicability Wizard — multi-step AI system risk classifier</li>
+            <li><span class="cl-tag feat">feat</span> Compliance Roadmap — enforcement milestone timeline</li>
+            <li><span class="cl-tag feat">feat</span> Glossary tooltips — auto-detected legal terms with hover definitions</li>
+            <li><span class="cl-tag fix">fix</span> Footer layout and sticky positioning standardised across all pages</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- v2.0 -->
+      <details class="cl-accordion-item">
+        <summary class="cl-accordion-summary">
+          <div class="cl-accordion-left">
+            <span class="changelog-dot" style="background: var(--gold-500); width:10px; height:10px; display:inline-block; border-radius:50%; flex-shrink:0;"></span>
+            <span class="changelog-version" style="background: var(--gold-100); color: var(--gold-500);">v2.0.0</span>
+            <span class="cl-accordion-title">Visual Redesign &amp; Branding</span>
+          </div>
+          <div class="cl-accordion-meta">
+            <span class="changelog-date">May 2026</span>
+            <svg class="cl-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </summary>
+        <div class="cl-accordion-body">
+          <ul class="changelog-list">
+            <li><span class="cl-tag feat">feat</span> Full sidebar navigation with SVG icon system</li>
+            <li><span class="cl-tag feat">feat</span> Design system with CSS custom properties (tokens, spacing, typography)</li>
+            <li><span class="cl-tag feat">feat</span> GitHub avatar integration for Maintainer profile (200px circular)</li>
+            <li><span class="cl-tag feat">feat</span> Credly, GitHub, LinkedIn, R-Seed credential badges</li>
+            <li><span class="cl-tag fix">fix</span> Standardised card grid layouts across all pages</li>
+            <li><span class="cl-tag fix">fix</span> All broken links and 404 routes resolved</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- v1.0 -->
+      <details class="cl-accordion-item">
+        <summary class="cl-accordion-summary">
+          <div class="cl-accordion-left">
+            <span class="changelog-dot" style="background: var(--text-muted); width:10px; height:10px; display:inline-block; border-radius:50%; flex-shrink:0;"></span>
+            <span class="changelog-version" style="background: rgba(124,144,168,0.12); color: var(--text-muted);">v1.0.0</span>
+            <span class="cl-accordion-title">Initial Release</span>
+          </div>
+          <div class="cl-accordion-meta">
+            <span class="changelog-date">Early 2025</span>
+            <svg class="cl-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </div>
+        </summary>
+        <div class="cl-accordion-body">
+          <ul class="changelog-list">
+            <li><span class="cl-tag feat">feat</span> Starter Pack for AI Act readiness (30-minute self-assessment)</li>
+            <li><span class="cl-tag feat">feat</span> Sector packs: Healthcare, Finance, HR, Marketing</li>
+            <li><span class="cl-tag feat">feat</span> Vendor Due Diligence Pack</li>
+            <li><span class="cl-tag feat">feat</span> Checklists, templates, and example documentation</li>
+            <li><span class="cl-tag feat">feat</span> GitHub Pages site deployed</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
   <!-- CTA -->
   <section style="text-align: center; padding-top: 0;">
     <div class="section-divider"><span>Ready to use the toolkit?</span></div>

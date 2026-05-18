@@ -1755,3 +1755,65 @@ pre:hover .copy-btn, .card:hover .copy-btn {
   background: var(--red-100);
   color: var(--red-400);
 }
+
+/* ── Changelog Accordion ─────────────────────── */
+.changelog-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  max-width: 860px;
+}
+.cl-accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.cl-accordion-item[open] {
+  border-color: var(--border-blue);
+  box-shadow: 0 0 0 1px var(--border-blue), var(--shadow-sm);
+}
+.cl-accordion-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--s-4) var(--s-6);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  gap: var(--s-4);
+  transition: background var(--t-fast);
+}
+.cl-accordion-summary::-webkit-details-marker { display: none; }
+.cl-accordion-summary:hover { background: rgba(255,255,255,0.03); }
+.cl-accordion-left {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  flex: 1;
+}
+.cl-accordion-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.cl-accordion-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-shrink: 0;
+}
+.cl-chevron {
+  color: var(--text-muted);
+  transition: transform var(--t-fast);
+}
+.cl-accordion-item[open] .cl-chevron {
+  transform: rotate(180deg);
+}
+.cl-accordion-body {
+  padding: 0 var(--s-6) var(--s-5) var(--s-6);
+  border-top: 1px solid var(--border);
+  animation: fadeInUp 0.2s ease both;
+}
