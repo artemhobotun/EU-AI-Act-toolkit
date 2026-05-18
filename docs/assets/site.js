@@ -400,7 +400,11 @@
 
     navLinks.forEach(function(link) {
       const href = link.getAttribute('href');
-      if (href && href.includes(currentFile)) {
+      const hrefFile = href ? href.split('/').pop().split('#')[0].split('?')[0] : '';
+      const normalizedCurrent = currentFile === '' ? 'index.html' : currentFile;
+      const normalizedHref = hrefFile === '' ? 'index.html' : hrefFile;
+
+      if (normalizedHref === normalizedCurrent) {
         link.classList.add('active');
         link.setAttribute('aria-current', 'page');
       } else {
