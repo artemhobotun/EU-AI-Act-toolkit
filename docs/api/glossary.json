@@ -1,0 +1,7 @@
+{
+  "GPAI": "General-Purpose AI. An AI model capable of competently performing a wide range of distinct tasks.",
+  "High-Risk": "AI systems posing significant risks to health, safety, or fundamental rights, subject to strict obligations.",
+  "Provider": "A natural or legal person developing an AI system and putting it into service under their own name/trademark.",
+  "Deployer": "Any person using an AI system under their authority in a professional context.",
+  "Prohibited": "AI practices that are completely banned because they pose unacceptable risks (e.g., social scoring)."
+}

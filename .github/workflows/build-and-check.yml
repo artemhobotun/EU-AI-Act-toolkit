@@ -1,0 +1,40 @@
+name: Build Search and API
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**/*.html'
+      - 'toolkit/**/*.md'
+      - 'scratch/build-*.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build Search Index
+        run: node scratch/build-search.js
+
+      - name: Build API JSONs
+        run: node scratch/build-api.js
+
+      - name: Auto-commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Auto-update search index and API JSONs"
+          file_pattern: "docs/search-index.json docs/api/*.json"

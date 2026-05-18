@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initSearch();
   initGlossary();
+  initPrintAndCopy();
 });
 
 /* --- Theme Toggle --- */
@@ -179,5 +180,38 @@ function initGlossary() {
         node.parentNode.replaceChild(frag, node);
       }
     });
+  });
+}
+
+/* --- Print & Copy Utilities --- */
+function initPrintAndCopy() {
+  // Add Print Button to Header
+  const headerRight = document.querySelector('.site-header > div');
+  if (headerRight) {
+    const printBtn = document.createElement('button');
+    printBtn.className = 'btn btn-outline';
+    printBtn.style.padding = '6px 12px';
+    printBtn.style.fontSize = '13px';
+    printBtn.style.gap = '8px';
+    printBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg> Print PDF';
+    printBtn.addEventListener('click', () => window.print());
+    headerRight.insertBefore(printBtn, headerRight.firstChild);
+  }
+
+  // Add Copy to Clipboard for <pre> elements
+  const codeBlocks = document.querySelectorAll('pre');
+  codeBlocks.forEach(block => {
+    block.style.position = 'relative';
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'copy-btn';
+    copyBtn.textContent = 'Copy';
+    
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(block.textContent.replace('Copy', '').trim());
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => copyBtn.textContent = 'Copy', 2000);
+    });
+    
+    block.appendChild(copyBtn);
   });
 }

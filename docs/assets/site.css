@@ -1582,3 +1582,51 @@ body.page-transitioning main > section {
   color: var(--text-muted);
   font-size: var(--text-sm);
 }
+
+/* ── UI Enhancements (Copy & Print) ────────────── */
+.copy-btn {
+  position: absolute;
+  top: var(--s-2);
+  right: var(--s-2);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: all var(--t-fast);
+  opacity: 0;
+}
+pre:hover .copy-btn, .card:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn:hover {
+  background: var(--blue-500);
+  color: #fff;
+  border-color: var(--blue-500);
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+  .site-header, .simple-footer, .nav-links, #search-modal, .copy-btn {
+    display: none !important;
+  }
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .card, .wizard-container, .roadmap-content {
+    border: none;
+    box-shadow: none;
+    page-break-inside: avoid;
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}

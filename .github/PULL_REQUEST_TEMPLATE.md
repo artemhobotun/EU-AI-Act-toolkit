@@ -31,3 +31,4 @@
 - [ ] Ran `./tools/scripts/check-toolkit-quality.sh`
 - [ ] Links checked where practical
 - [ ] Markdown renders cleanly
+- [ ] (If applicable) Search index and API JSONs will be automatically built by GitHub Actions upon merging.
