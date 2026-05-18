@@ -1497,6 +1497,9 @@ body.page-transitioning main > section {
   display: flex;
   flex-direction: column;
   gap: var(--s-3);
+  max-width: 680px;
+  margin: var(--s-6) auto var(--s-2) auto;
+  width: 100%;
 }
 .wizard-option {
   background: var(--bg-surface);
@@ -1510,8 +1513,10 @@ body.page-transitioning main > section {
   justify-content: space-between;
 }
 .wizard-option:hover {
-  border-color: var(--border-blue);
-  background: var(--blue-100);
+  border-color: var(--blue-500);
+  background: rgba(59, 130, 246, 0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.05);
 }
 .wizard-result {
   text-align: center;
