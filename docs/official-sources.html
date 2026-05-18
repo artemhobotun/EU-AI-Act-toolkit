@@ -10,28 +10,50 @@
 </head>
 <body>
 
-<header>
-  <div class="header-container">
-    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="packs.html">Packs</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="official-sources.html" class="active">EU Sources</a></li>
-        <li><a href="maintainer.html">Maintainer</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="quiz.html" class="nav-cta">Self-Check →</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<main>
+
+<div class="layout-wrapper">
+  
+  <aside class="sidebar">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Core Actions</div>
+      <nav>
+        <ul>
+          <li><a href="quiz.html" class="nav-cta">✦ Start Self-Check</a></li>
+          <li><a href="index.html">⌂ Dashboard</a></li>
+          <li><a href="packs.html" class="">📦 Toolkit Packs</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Knowledge Base</div>
+      <nav>
+        <ul>
+          <li><a href="use-cases.html" class="">💼 Use Cases</a></li>
+          <li><a href="resources.html" class="">📚 Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="nav-section-title">Support & Info</div>
+      <nav>
+        <ul>
+          <li><a href="official-sources.html" class="active">🏛️ EU Sources</a></li>
+          <li><a href="community.html" class="">🤝 Community</a></li>
+          <li><a href="maintainer.html" class="">👨‍💻 Maintainer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content">
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" style="text-align: left; padding-top: var(--s-10);">
     <div class="hero-eyebrow">🏛️ Authoritative EU Publications</div>
     <h1>Official EU AI Act Sources</h1>
     <p class="hero-subtitle">
@@ -42,7 +64,7 @@
 
   <!-- Important note -->
   <section style="padding-top: 0;">
-    <div class="callout callout-info" style="max-width: 800px; margin: 0 auto;">
+    <div class="callout callout-info" style="max-width: 800px; ">
       <div class="callout-icon">ℹ️</div>
       <div class="callout-body">
         <h4>About This Page</h4>
@@ -58,7 +80,7 @@
       <h2>The Regulation and Its Official Text</h2>
       <p>The EU AI Act (Regulation (EU) 2024/1689) is published on EUR-Lex, the official EU law database.</p>
     </div>
-    <div style="display: flex; flex-direction: column; gap: var(--s-4); max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: var(--s-4); max-width: 800px; ">
 
       <div class="source-card">
         <div class="source-card-badge" style="background: rgba(212,169,58,0.12); border-color: var(--border-gold);">📜</div>
@@ -100,7 +122,7 @@
       <h2>Commission Policy and Regulatory Framework</h2>
       <p>Official policy pages from the European Commission on AI regulation and the EU AI Office.</p>
     </div>
-    <div style="display: flex; flex-direction: column; gap: var(--s-4); max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: var(--s-4); max-width: 800px; ">
 
       <div class="source-card">
         <div class="source-card-badge">🇪🇺</div>
@@ -142,7 +164,7 @@
       <h2>What the EU AI Act Covers</h2>
       <p>A brief plain-language overview of the regulation's scope — for context only. Always refer to the official text.</p>
     </div>
-    <div class="cards-grid-3" style="max-width: 900px; margin: 0 auto;">
+    <div class="cards-grid-3" style="max-width: 900px; ">
       <div class="card">
         <div class="card-icon">🏗️</div>
         <h3>Risk-Based Framework</h3>
@@ -189,7 +211,7 @@
       <span class="section-label">Additional Resources</span>
       <h2>Related Official Guidance and Background</h2>
     </div>
-    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; ">
 
       <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" rel="noopener noreferrer" class="resource-row">
         <div class="resource-row-icon">📜</div>
@@ -233,7 +255,7 @@
   <!-- Toolkit source notes -->
   <section style="padding-top: 0;">
     <div class="section-divider"><span>Toolkit-Specific Reference</span></div>
-    <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+    <div style="text-align: center; max-width: 600px; ">
       <h3 style="margin-bottom: var(--s-4);">How This Toolkit Uses These Sources</h3>
       <p style="color: var(--text-muted); font-size: var(--text-sm); line-height: 1.7; margin-bottom: var(--s-6);">
         The EU AI Act Toolkit's templates, checklists, and guidance are rooted in the official regulation and conservative interpretation. The internal source notes document how specific toolkit content connects to regulation articles and authoritative guidance.
@@ -254,55 +276,10 @@
 
 </main>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
-        <p>Independent practical resource. Not affiliated with or endorsed by the EU. Educational use only.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Official Sources</h4>
-        <ul>
-          <li><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj" target="_blank" rel="noopener">EUR-Lex — Full Text</a></li>
-          <li><a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EC Framework</a></li>
-          <li><a href="https://digital-strategy.ec.europa.eu/en/policies/ai-office" target="_blank" rel="noopener">EU AI Office</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Toolkit</h4>
-        <ul>
-          <li><a href="packs.html">Toolkit Packs</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="guide/10-source-notes.md">Source Notes</a></li>
-          <li><a href="quiz.html">Self-Check</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="maintainer.html">Maintainer</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><strong>EU AI Act Toolkit</strong> — Not affiliated with the EU. Links to official sources are provided for reference only.</p>
-      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
-    </div>
-  </div>
-</footer>
+
+  </main>
+</div>
 
 <script src="assets/site.js" defer></script>
-
-<script>
-  window.addEventListener('scroll', () => {
-    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 20);
-  });
-  document.querySelectorAll('nav a').forEach(link => {
-    if (window.location.pathname.endsWith(link.getAttribute('href'))) link.classList.add('active');
-  });
-</script>
 </body>
 </html>

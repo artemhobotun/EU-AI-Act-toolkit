@@ -10,28 +10,50 @@
 </head>
 <body>
 
-<header>
-  <div class="header-container">
-    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="packs.html">Packs</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="official-sources.html">EU Sources</a></li>
-        <li><a href="maintainer.html">Maintainer</a></li>
-        <li><a href="community.html" class="active">Community</a></li>
-        <li><a href="quiz.html" class="nav-cta">Self-Check →</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<main>
+
+<div class="layout-wrapper">
+  
+  <aside class="sidebar">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Core Actions</div>
+      <nav>
+        <ul>
+          <li><a href="quiz.html" class="nav-cta">✦ Start Self-Check</a></li>
+          <li><a href="index.html">⌂ Dashboard</a></li>
+          <li><a href="packs.html" class="">📦 Toolkit Packs</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Knowledge Base</div>
+      <nav>
+        <ul>
+          <li><a href="use-cases.html" class="">💼 Use Cases</a></li>
+          <li><a href="resources.html" class="">📚 Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="nav-section-title">Support & Info</div>
+      <nav>
+        <ul>
+          <li><a href="official-sources.html" class="">🏛️ EU Sources</a></li>
+          <li><a href="community.html" class="active">🤝 Community</a></li>
+          <li><a href="maintainer.html" class="">👨‍💻 Maintainer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content">
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" style="text-align: left; padding-top: var(--s-10);">
     <div class="hero-eyebrow">🤝 Open Source · Community-Supported</div>
     <h1>Community &amp; Contribution</h1>
     <p class="hero-subtitle">
@@ -151,7 +173,7 @@
       <span class="section-label">Project Information</span>
       <h2>Governance, Licensing &amp; Transparency</h2>
     </div>
-    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; margin: 0 auto;">
+    <div style="display: flex; flex-direction: column; gap: var(--s-2); max-width: 800px; ">
 
       <a href="../.github/project/governance.md" class="resource-row">
         <div class="resource-row-icon">🏛️</div>
@@ -223,53 +245,10 @@
 
 </main>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
-        <p>Practical AI governance readiness for SMEs. Educational use only.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Contribute</h4>
-        <ul>
-          <li><a href="../.github/CONTRIBUTING.md">Contributing Guide</a></li>
-          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit/issues" target="_blank" rel="noopener">Issues</a></li>
-          <li><a href="../.github/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Toolkit</h4>
-        <ul>
-          <li><a href="packs.html">Packs</a></li>
-          <li><a href="use-cases.html">Use Cases</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="quiz.html">Self-Check</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="maintainer.html">Maintainer</a></li>
-          <li><a href="official-sources.html">EU Sources</a></li>
-          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
-          <li><a href="../LICENSE">License</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><strong>EU AI Act Toolkit</strong> — Open source. Maintained by Artem Nazarko.</p>
-      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
-    </div>
-  </div>
-</footer>
+
+  </main>
+</div>
 
 <script src="assets/site.js" defer></script>
-
-<script>
-  window.addEventListener('scroll', () => {
-    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 20);
-  });
-</script>
 </body>
 </html>

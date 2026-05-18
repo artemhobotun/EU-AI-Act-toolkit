@@ -10,28 +10,50 @@
 </head>
 <body>
 
-<header>
-  <div class="header-container">
-    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="packs.html">Packs</a></li>
-        <li><a href="use-cases.html" class="active">Use Cases</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="official-sources.html">EU Sources</a></li>
-        <li><a href="maintainer.html">Maintainer</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="quiz.html" class="nav-cta">Self-Check →</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
 
-<main>
+
+<div class="layout-wrapper">
+  
+  <aside class="sidebar">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Core Actions</div>
+      <nav>
+        <ul>
+          <li><a href="quiz.html" class="nav-cta">✦ Start Self-Check</a></li>
+          <li><a href="index.html">⌂ Dashboard</a></li>
+          <li><a href="packs.html" class="">📦 Toolkit Packs</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Knowledge Base</div>
+      <nav>
+        <ul>
+          <li><a href="use-cases.html" class="active">💼 Use Cases</a></li>
+          <li><a href="resources.html" class="">📚 Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="nav-section-title">Support & Info</div>
+      <nav>
+        <ul>
+          <li><a href="official-sources.html" class="">🏛️ EU Sources</a></li>
+          <li><a href="community.html" class="">🤝 Community</a></li>
+          <li><a href="maintainer.html" class="">👨‍💻 Maintainer</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content">
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" style="text-align: left; padding-top: var(--s-10);">
     <div class="hero-eyebrow">🎯 Realistic Worked Examples</div>
     <h1>Use Cases &amp; Examples</h1>
     <p class="hero-subtitle">
@@ -182,7 +204,7 @@
       <h2>Sample Evidence Pack</h2>
       <p>A complete worked example of how to organise and maintain AI governance documentation.</p>
     </div>
-    <div style="max-width: 700px; margin: 0 auto;">
+    <div style="max-width: 700px; ">
       <div class="card card-gold">
         <div class="card-icon">📚</div>
         <h3>Sample Evidence Pack</h3>
@@ -230,52 +252,10 @@
 
 </main>
 
-<footer>
-  <div class="footer-container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="logo-footer">🇪🇺 EU AI Act Toolkit</span>
-        <p>Practical AI governance readiness for SMEs. Educational use only.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Use Cases</h4>
-        <ul>
-          <li><a href="use-cases.html">Common Scenarios</a></li>
-          <li><a href="use-cases.html">Vendor Examples</a></li>
-          <li><a href="use-cases.html">Evidence Pack</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Toolkit</h4>
-        <ul>
-          <li><a href="packs.html">Packs</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="quiz.html">Self-Check</a></li>
-          <li><a href="official-sources.html">EU Sources</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Project</h4>
-        <ul>
-          <li><a href="maintainer.html">Maintainer</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p><strong>EU AI Act Toolkit</strong> — Examples are illustrative only. Not legal advice.</p>
-      <p>© 2026. <a href="https://github.com/artemhobotun/EU-AI-Act-Toolkit">View on GitHub</a></p>
-    </div>
-  </div>
-</footer>
+
+  </main>
+</div>
 
 <script src="assets/site.js" defer></script>
-
-<script>
-  window.addEventListener('scroll', () => {
-    document.querySelector('header').classList.toggle('scrolled', window.scrollY > 20);
-  });
-</script>
 </body>
 </html>
