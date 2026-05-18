@@ -102,6 +102,31 @@ body {
   overflow-x: hidden;
 }
 
+/* ── Keyframes & Animations ──────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(47, 107, 255, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(47, 107, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(47, 107, 255, 0); }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+main > section {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+main > section:nth-child(1) { animation-delay: 0.1s; }
+main > section:nth-child(2) { animation-delay: 0.2s; }
+main > section:nth-child(3) { animation-delay: 0.3s; }
+main > section:nth-child(4) { animation-delay: 0.4s; }
+main > section:nth-child(5) { animation-delay: 0.5s; }
+
 body::before {
   content: '';
   position: fixed;
@@ -237,11 +262,11 @@ section.full-width { max-width: none; }
 }
 
 .nav-section-title {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--text-faint);
+  color: var(--text-muted);
   margin-bottom: var(--s-3);
   padding: 0 var(--s-3);
 }
@@ -258,29 +283,31 @@ nav a {
   display: flex;
   align-items: center;
   gap: var(--s-3);
-  font-size: var(--text-sm);
+  font-size: 14px;
   font-weight: 500;
   color: var(--text-secondary) !important;
   text-decoration: none;
-  padding: var(--s-3);
+  padding: var(--s-3) var(--s-4);
   border-radius: var(--r-md);
   transition: all var(--t-fast);
 }
 nav a:hover { 
   color: var(--text-primary) !important; 
   background: rgba(255,255,255,0.06); 
-  transform: translateX(2px);
+  transform: translateX(4px);
 }
 nav a.active { 
   color: var(--blue-400) !important; 
   background: rgba(47,107,255,0.12); 
   font-weight: 600;
+  border-left: 2px solid var(--blue-500);
 }
 nav a.nav-cta {
   color: #fff !important;
   background: linear-gradient(135deg, var(--blue-600), var(--blue-500));
   box-shadow: 0 4px 12px rgba(47,107,255,0.25);
   font-weight: 600;
+  border-left: none;
 }
 nav a.nav-cta:hover { 
   background: var(--blue-500); 
