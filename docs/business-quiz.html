@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Industry Impact Analyzer — EU AI Act Toolkit</title>
+  <meta name="description" content="Find out exactly what the EU AI Act means for your specific industry and business activities in less than 60 seconds.">
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🇪🇺</text></svg>">
+
+  <!-- Open Graph / Social Cards -->
+  <meta property="og:title" content="Industry Impact Analyzer — EU AI Act Toolkit">
+  <meta property="og:description" content="Tailored EU AI Act compliance picture for your business activities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://artemhobotun.github.io/EU-AI-Act-Toolkit/business-quiz.html">
+  <meta property="og:image" content="https://artemhobotun.github.io/EU-AI-Act-Toolkit/assets/og-image.svg">
+  <meta property="og:site_name" content="EU AI Act Toolkit">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Industry Impact Analyzer — EU AI Act Toolkit">
+  <meta name="twitter:description" content="Tailored EU AI Act compliance picture for your business activities.">
+  <meta name="twitter:image" content="https://artemhobotun.github.io/EU-AI-Act-Toolkit/assets/og-image.svg">
+
+  <style>
+    .industry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--s-4);
+      margin-bottom: var(--s-6);
+    }
+    .industry-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: var(--s-5);
+      cursor: pointer;
+      text-align: center;
+      transition: all var(--t-base);
+    }
+    .industry-card:hover {
+      border-color: var(--blue-500);
+      transform: translateY(-2px);
+      background: rgba(59, 130, 246, 0.04);
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.05);
+    }
+    .industry-card.selected-card {
+      border-color: var(--gold-400) !important;
+      background: rgba(212, 163, 89, 0.08) !important;
+      box-shadow: 0 0 15px rgba(212, 163, 89, 0.15) !important;
+    }
+    .activity-checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-3);
+      padding: var(--s-4);
+      background: rgba(255,255,255,0.01);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      margin-bottom: var(--s-3);
+      cursor: pointer;
+      transition: all var(--t-fast);
+    }
+    .activity-checkbox-item:hover {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.15);
+    }
+    .activity-checkbox-item.checked-item {
+      border-color: var(--blue-500);
+      background: rgba(59, 130, 246, 0.04);
+    }
+    .activity-checkbox-item input[type="checkbox"] {
+      margin-top: 3px;
+      width: 16px;
+      height: 16px;
+      accent-color: var(--blue-500);
+    }
+    .action-pill {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: var(--r-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pill-prohibited {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--red-400);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+    .pill-highrisk {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--gold-400);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .pill-transparency {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--blue-400);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .pill-minimal {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout-wrapper">
+  <aside class="sidebar">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    
+    <div class="nav-section">
+      <div class="nav-section-title">Core Actions</div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Dashboard</a></li>
+          <li><a href="packs.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg> Toolkit Packs</a></li>
+          <li><a href="use-cases.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Use Cases</a></li>
+          <li><a href="resources.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg> Resources</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">Interactive Tools</div>
+      <nav>
+        <ul>
+          <li><a href="quiz.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg> Readiness Self-Check</a></li>
+          <li><a href="business-quiz.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> Industry Analyzer</a></li>
+          <li><a href="wizard.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"></path></svg> Risk Decision Tree</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="nav-section-title">Support & Info</div>
+      <nav>
+        <ul>
+          <li><a href="official-sources.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg> EU Sources</a></li>
+          <li><a href="community.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Community</a></li>
+          <li><a href="roadmap.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg> Roadmap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="hero" style="padding-bottom: var(--s-10);">
+      <div class="hero-eyebrow">✦ 60 SECONDS · TAILORED FOR BUSINESS</div>
+      <h1 class="gold-gradient">What does the AI Act mean for my Business?</h1>
+      <p class="hero-subtitle">
+        Pick your industry. Check what you use AI for. Get your personalized compliance picture instantly.
+      </p>
+    </section>
+
+    <!-- Quiz Main Card Container -->
+    <section style="padding-top: 0; padding-bottom: var(--s-16);">
+      <div class="card" id="analyzer-container" style="max-width: 820px; margin: 0 auto; padding: var(--s-6);">
+        
+        <!-- Step 1: Select Industry -->
+        <div id="step-industry">
+          <h2 style="font-size: var(--text-xl); margin-top: 0; margin-bottom: var(--s-4); color: #fff;">1. Choose Your Industry Focus</h2>
+          <p style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: var(--s-5);">Select the primary domain where your organization deploys, develops, or uses AI software.</p>
+          
+          <div class="industry-grid">
+            <div class="industry-card" data-ind="healthcare">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">🏥</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">Healthcare</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">Triage, Diagnostics, Clinical Bots</span>
+            </div>
+            <div class="industry-card" data-ind="finance">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">🏦</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">Finance & Insurance</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">Credit Scores, Fraud, Trading</span>
+            </div>
+            <div class="industry-card" data-ind="hr">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">💼</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">HR & Hiring</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">CV Ranking, Trackers, Recruiting</span>
+            </div>
+            <div class="industry-card" data-ind="education">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">🎓</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">Education</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">Grading, Admissions, EdTech</span>
+            </div>
+            <div class="industry-card" data-ind="publicsector">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">👮</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">Public Sector</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">Policing, Biometrics, Border</span>
+            </div>
+            <div class="industry-card" data-ind="retail">
+              <div style="font-size: var(--text-3xl); margin-bottom: var(--s-3);">🛒</div>
+              <h3 style="font-size: var(--text-base); margin: 0 0 var(--s-2) 0; color: #fff;">Retail & Business</h3>
+              <span style="font-size: var(--text-xs); color: var(--text-muted);">E-commerce, Ads, Pricing</span>
+            </div>
+          </div>
+
+          <div style="text-align: right;">
+            <button class="btn btn-primary" id="btn-to-activities" disabled style="padding: 10px 20px;">Continue to Activities →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Check Activities -->
+        <div id="step-activities" style="display: none;">
+          <button class="btn btn-ghost" id="btn-back-to-industry" style="padding: 4px 10px; margin-bottom: var(--s-4); font-size: 12px;">← Change Industry</button>
+          
+          <h2 style="font-size: var(--text-xl); margin-top: 0; margin-bottom: var(--s-2); color: #fff;">2. Select Your AI Activities</h2>
+          <p style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: var(--s-5);">Tick the activities that represent how your company uses or plans to use artificial intelligence.</p>
+
+          <div id="activities-checkbox-list"></div>
+
+          <div style="text-align: right; margin-top: var(--s-6);">
+            <button class="btn btn-gold btn-lg" id="btn-generate-report" style="padding: 12px 24px;">Analyze Activities ✦</button>
+          </div>
+        </div>
+
+        <!-- Step 3: personalized Results -->
+        <div id="step-results" style="display: none;">
+          <div style="text-align: center; margin-bottom: var(--s-6);">
+            <div style="font-size: 52px; margin-bottom: var(--s-3);">📊</div>
+            <h2 style="font-size: var(--text-2xl); color: #fff; margin: 0 0 var(--s-2) 0;">Your Tailored Compliance Profile</h2>
+            <p style="color: var(--text-muted); font-size: var(--text-sm); max-width: 500px; margin: 0 auto;">Based on your industry selections and Checked activities, your AI applications are classified below under the EU AI Act framework.</p>
+          </div>
+
+          <!-- Risk level summary block -->
+          <div id="risk-summary-card" style="padding: var(--s-5); border-radius: var(--r-lg); margin-bottom: var(--s-6); border: 1px solid var(--border);"></div>
+
+          <h3 style="font-size: var(--text-lg); color: #fff; margin-bottom: var(--s-4); border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: var(--s-2);">📋 Actionable Next Steps</h3>
+          <div id="action-items-list" style="display: flex; flex-direction: column; gap: var(--s-4);"></div>
+
+          <!-- Download Action Pack & Restart buttons -->
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s-3); justify-content: center; margin-top: var(--s-8);">
+            <button class="btn btn-gold" id="btn-dl-business-md">💾 Download Report (.md)</button>
+            <button class="btn btn-outline" id="btn-dl-business-json">💾 Download JSON (.json)</button>
+            <button class="btn btn-ghost" id="btn-restart-analyzer">🔄 Reset Analyzer</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Important Notice Callout -->
+    <section style="padding-top: 0;">
+      <div class="callout callout-legal" style="max-width: 820px; margin: 0 auto;">
+        <div class="callout-icon">⚖️</div>
+        <div class="callout-body">
+          <h4>Legal Disclaimer</h4>
+          This Analyzer is an educational assessment mapping business practices to the risk tiers of the EU AI Act (Regulation (EU) 2024/1689). It is not a formal legal audit, conformity determination, or attorney-client consult. Always consult qualified privacy, security, and legal counsel for actual compliance verifications.
+        </div>
+      </div>
+    </section>
+
+    <footer class="simple-footer">
+      <div style="display: flex; justify-content: center; align-items: center; gap: var(--s-3); flex-wrap: wrap;">
+        <p style="margin: 0;"><strong>EU AI Act Toolkit</strong> — Maintained by <a href="maintainer.html">Artem Nazarko</a>. Educational use only, not legal advice.</p>
+        <span style="opacity: 0.4;">|</span>
+        <a href="https://doi.org/10.5281/zenodo.20277010" target="_blank" rel="noopener" style="display: inline-flex; align-items: center;">
+          <img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20277010-blue.svg" alt="DOI" style="height: 16px; opacity: 0.75; transition: opacity 0.2s; border-radius: 2px;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.75">
+        </a>
+      </div>
+    </footer>
+  </main>
+</div>
+
+<!-- Search Modal -->
+<div id="search-modal">
+  <div class="search-modal-content">
+    <div class="search-header">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <input type="text" id="search-input" placeholder="Search templates, guidelines, terms... (Cmd+K)" autocomplete="off">
+    </div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+</div>
+
+<script src="assets/main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Industry database configuration
+    const database = {
+      healthcare: [
+        { id: 'h1', text: 'AI-driven patient triage, urgency prioritization, or emergency room logistics.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Systems prioritizing patients for emergency medical care represent significant safety risks, requiring full compliance.' },
+        { id: 'h2', text: 'AI diagnostics assisting in clinical detection (e.g. tumor mapping, X-Ray imaging screening).', risk: 'high', law: 'Annex II (High-Risk)', desc: 'AI integrated into medical equipment regulated under EU MDR is categorized under Annex II high-risk frameworks.' },
+        { id: 'h3', text: 'Chatbots scheduling hospital visits, answering general FAQs, or assisting with basic administration.', risk: 'transparency', law: 'Article 50 (Transparency)', desc: 'General conversational agents require clear labeling so users understand they are interacting with an artificial agent.' },
+        { id: 'h4', text: 'AI algorithms doing research on molecular simulations or compound binding analyses.', risk: 'minimal', law: 'Minimal Risk', desc: 'Pre-clinical research or laboratory simulation systems carry no high-risk compliance parameters under the Act.' }
+      ],
+      finance: [
+        { id: 'f1', text: 'AI scoring individual creditworthiness, credit limits, or screening consumer loan files.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Credit assessment systems critically impact financial opportunities and are classified as High-Risk.' },
+        { id: 'f2', text: 'AI assessing risk premiums or evaluating pricing profiles for life/health insurance policies.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'AI determining individual coverage or risk profiles for life or health policies is categorized as High-Risk.' },
+        { id: 'f3', text: 'AI models detecting financial transaction fraud, credit card security anomalies, or high-frequency trading.', risk: 'minimal', law: 'Minimal Risk', desc: 'Standard business fraud mitigation tools or internal trading mechanisms operate under minimal risk.' },
+        { id: 'f4', text: 'Conversational support bots responding to generic user account statements or payment queries.', risk: 'transparency', law: 'Article 50 (Transparency)', desc: 'Must display a conversational disclosure informing users of the automated chat interface.' }
+      ],
+      hr: [
+        { id: 'hr1', text: 'AI screening candidate resumes, ranking job applicants, or filtering application pipelines.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Systems used in recruitment heavily influence livelihood pathways and fall under Annex III High-Risk rules.' },
+        { id: 'hr2', text: 'AI checking workplace tracking feeds to assess employee productivity, performance levels, or promote/terminate staff.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Workplace evaluation tools and task allocation algorithms carry high-risk oversight demands.' },
+        { id: 'hr3', text: 'AI writing job description templates or compiling generic company handbook summaries.', risk: 'minimal', law: 'Minimal Risk', desc: 'Passive administrative copy writing tools are outside the scope of high-risk regulations.' },
+        { id: 'hr4', text: 'Generative AI writing personalized hiring outreach emails or draft messages to applicants.', risk: 'transparency', law: 'Article 50 (Transparency)', desc: 'Requires clear transparent disclosure if synthetic generative text is presented as active communications.' }
+      ],
+      education: [
+        { id: 'e1', text: 'AI grading formal exam papers, scoring essays, or determining course completion records.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Systems scoring individual academic outcomes are classified as High-Risk to prevent systematic bias.' },
+        { id: 'e2', text: 'AI screening student admissions applications or allocating university entrance allocations.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Admissions and university selection screening carry Annex III High-Risk obligations.' },
+        { id: 'e3', text: 'AI classroom study simulators, adaptive language learning apps, or flashcard gamification tools.', risk: 'minimal', law: 'Minimal Risk', desc: 'Standard supplementary learning utilities carry minimal compliance requirements.' }
+      ],
+      publicsector: [
+        { id: 'p1', text: 'AI doing real-time remote biometric facial recognition in public spaces for law enforcement.', risk: 'prohibited', law: 'Article 5 (Prohibited)', desc: 'Real-time biometric profiling in public areas is banned across the EU starting February 2025, subject to rare court-ordered exceptions.' },
+        { id: 'p2', text: 'AI tracking historical records to predict crime locations (predictive policing) or score recidivism risk.', risk: 'prohibited', law: 'Article 5 (Prohibited)', desc: 'Predictive policing systems evaluating behavior to assess individual criminal risk are strictly banned.' },
+        { id: 'p3', text: 'AI checking asylum papers, checking borders, or scoring border control screening priority levels.', risk: 'high', law: 'Annex III (High-Risk)', desc: 'Border oversight and immigration eligibility screening represent severe rights implications and are High-Risk.' }
+      ],
+      retail: [
+        { id: 'r1', text: 'AI analyzing security feeds to read shopper emotions or facial expressions in physical stores.', risk: 'prohibited', law: 'Article 5 (Prohibited)', desc: 'Biometric systems attempting to detect individual emotion or moods inside spaces are legally prohibited.' },
+        { id: 'r2', text: 'AI recommendation systems proposing products to shoppers or analyzing shopping cart trends.', risk: 'minimal', law: 'Minimal Risk', desc: 'Retail and inventory optimization utilities carry minimal regulatory pressure.' },
+        { id: 'r3', text: 'Generative AI writing e-commerce marketing copies, blog layouts, or product advertisements.', risk: 'transparency', law: 'Article 50 (Transparency)', desc: 'Generative copy engines require compliance with transparent labeling parameters.' },
+        { id: 'r4', text: 'Dynamic pricing engines continuously modifying prices of products based on shopping demand patterns.', risk: 'minimal', law: 'Minimal Risk', desc: 'Algorithmic standard merchant pricing adjustments are classified as Minimal Risk.' }
+      ]
+    };
+
+    let selectedIndustry = null;
+    letCheckedActivities = [];
+
+    const indCards = document.querySelectorAll('.industry-card');
+    const btnToActivities = document.getElementById('btn-to-activities');
+    const stepIndustry = document.getElementById('step-industry');
+    const stepActivities = document.getElementById('step-activities');
+    const stepResults = document.getElementById('step-results');
+    const listContainer = document.getElementById('activities-checkbox-list');
+
+    // Selection of Industry Cards
+    indCards.forEach(card => {
+      card.addEventListener('click', () => {
+        indCards.forEach(c => c.classList.remove('selected-card'));
+        card.classList.add('selected-card');
+        selectedIndustry = card.getAttribute('data-ind');
+        btnToActivities.disabled = false;
+      });
+    });
+
+    // Navigation: Step 1 to Step 2
+    btnToActivities.addEventListener('click', () => {
+      if (!selectedIndustry) return;
+      stepIndustry.style.display = 'none';
+      stepActivities.style.display = 'block';
+
+      // Load activities
+      listContainer.innerHTML = '';
+      letCheckedActivities = [];
+      const activities = database[selectedIndustry] || [];
+
+      activities.forEach((act) => {
+        const item = document.createElement('div');
+        item.className = 'activity-checkbox-item';
+        item.setAttribute('data-id', act.id);
+
+        item.innerHTML = `
+          <input type="checkbox" id="chk-${act.id}" value="${act.id}">
+          <div style="flex: 1;">
+            <label for="chk-${act.id}" style="font-weight: 600; color: #fff; cursor: pointer; display: block; margin-bottom: 4px; font-size: 14px;">${act.text}</label>
+            <span class="action-pill pill-${act.risk}">${act.risk === 'prohibited' ? '⛔ Prohibited' : act.risk === 'high' ? '⚠️ High Risk' : act.risk === 'transparency' ? '🤖 Transparency' : '✅ Minimal Risk'}</span>
+          </div>
+        `;
+
+        // Interactive toggle behavior
+        const chk = item.querySelector('input[type="checkbox"]');
+        item.addEventListener('click', (e) => {
+          if (e.target !== chk && e.target.tagName !== 'LABEL') {
+            chk.checked = !chk.checked;
+            chk.dispatchEvent(new Event('change'));
+          }
+        });
+
+        chk.addEventListener('change', () => {
+          if (chk.checked) {
+            item.classList.add('checked-item');
+            letCheckedActivities.push(act.id);
+          } else {
+            item.classList.remove('checked-item');
+            letCheckedActivities = letCheckedActivities.filter(id => id !== act.id);
+          }
+        });
+
+        listContainer.appendChild(item);
+      });
+    });
+
+    // Back to step 1
+    document.getElementById('btn-back-to-industry').addEventListener('click', () => {
+      stepActivities.style.display = 'none';
+      stepIndustry.style.display = 'block';
+    });
+
+    // Generate Personalized Compliance Profile
+    document.getElementById('btn-generate-report').addEventListener('click', () => {
+      if (letCheckedActivities.length === 0) {
+        alert('Please tick at least one activity to generate your personalized compliance picture.');
+        return;
+      }
+
+      stepActivities.style.display = 'none';
+      stepResults.style.display = 'block';
+
+      const activities = database[selectedIndustry] || [];
+      const checkedData = activities.filter(a => letCheckedActivities.includes(a.id));
+
+      // Calculate worst risk profile
+      let finalRisk = 'minimal';
+      if (checkedData.some(a => a.risk === 'prohibited')) finalRisk = 'prohibited';
+      else if (checkedData.some(a => a.risk === 'high')) finalRisk = 'high';
+      else if (checkedData.some(a => a.risk === 'transparency')) finalRisk = 'transparency';
+
+      // Render summary card
+      const summaryCard = document.getElementById('risk-summary-card');
+      let riskTitle = '';
+      let riskColor = '';
+      let riskBg = '';
+      let riskDesc = '';
+
+      if (finalRisk === 'prohibited') {
+        riskTitle = '🛑 Banned Practices Flagged';
+        riskColor = 'var(--red-400)';
+        riskBg = 'rgba(239, 68, 68, 0.08)';
+        riskDesc = 'Your system matches criteria for prohibited AI methodologies. In the EU, these practices face strict market bans starting February 2025. You must urgently suspend deployment plans or significantly rebuild the functional scope.';
+      } else if (finalRisk === 'high') {
+        riskTitle = '⚠️ High-Risk AI Classification';
+        riskColor = 'var(--gold-400)';
+        riskBg = 'rgba(245, 158, 11, 0.08)';
+        riskDesc = 'Your organization operates system components classified as High-Risk under Annex II or III guidelines. Full legal compliance, independent testing, post-market surveillance plans, and central database registration are mandatory.';
+      } else if (finalRisk === 'transparency') {
+        riskTitle = '🤖 Limited Risk (Transparency Requirements)';
+        riskColor = 'var(--blue-400)';
+        riskBg = 'rgba(59, 130, 246, 0.08)';
+        riskDesc = 'Your applications are safe to place on the market, but require direct, active disclosure frameworks. Users must be clearly informed they are communicating with or viewing content created by an AI engine.';
+      } else {
+        riskTitle = '✅ Minimal Risk System';
+        riskColor = '#34d399';
+        riskBg = 'rgba(16, 185, 129, 0.08)';
+        riskDesc = 'Your AI activities fall into the lowest risk classification. No structural compliance obligations apply under the AI Act, though we recommend establishing high-quality internal safety parameters.';
+      }
+
+      summaryCard.style.borderColor = riskColor;
+      summaryCard.style.background = riskBg;
+      summaryCard.innerHTML = `
+        <h3 style="margin-top: 0; color: ${riskColor}; font-size: var(--text-lg); display: flex; align-items: center; gap: 8px;">${riskTitle}</h3>
+        <p style="color: #fff; font-size: var(--text-sm); line-height: 1.6; margin: var(--s-3) 0 0 0;">${riskDesc}</p>
+      `;
+
+      // Render action items
+      const itemsList = document.getElementById('action-items-list');
+      itemsList.innerHTML = '';
+
+      checkedData.forEach(item => {
+        const row = document.createElement('div');
+        row.style.cssText = 'padding: var(--s-4); border: 1px solid var(--border); border-radius: 6px; background: rgba(255,255,255,0.01); display: flex; flex-direction: column; gap: var(--s-1);';
+        
+        let pillClass = `pill-${item.risk}`;
+        let riskLabel = item.risk === 'prohibited' ? 'Prohibited' : item.risk === 'high' ? 'High Risk' : item.risk === 'transparency' ? 'Transparency Required' : 'Minimal Risk';
+
+        row.innerHTML = `
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: var(--s-2);">
+            <strong style="color: #fff; font-size: 14px;">Activity: ${item.text}</strong>
+            <span class="action-pill ${pillClass}">${riskLabel}</span>
+          </div>
+          <p style="color: var(--text-muted); font-size: var(--text-xs); margin: 0; line-height: 1.5;"><strong>Scope:</strong> ${item.desc}</p>
+          <p style="color: var(--gold-400); font-weight: 600; font-size: var(--text-xs); margin: 4px 0 0 0;"><strong>Law Target:</strong> ${item.law}</p>
+        `;
+
+        itemsList.appendChild(row);
+      });
+    });
+
+    // Reset analyzer
+    document.getElementById('btn-restart-analyzer').addEventListener('click', () => {
+      selectedIndustry = null;
+      letCheckedActivities = [];
+      indCards.forEach(c => c.classList.remove('selected-card'));
+      btnToActivities.disabled = true;
+
+      stepResults.style.display = 'none';
+      stepIndustry.style.display = 'block';
+    });
+
+    // Export Reports
+    function triggerDownload(content, filename, mime) {
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      if (window.showNotification) window.showNotification('Compliance report exported!');
+      else alert('Compliance report exported!');
+    }
+
+    document.getElementById('btn-dl-business-md').addEventListener('click', () => {
+      const activities = database[selectedIndustry] || [];
+      const checkedData = activities.filter(a => letCheckedActivities.includes(a.id));
+
+      let content = `# EU AI Act - Business Activities & Risk Impact Report\n\n`;
+      content += `- **Primary Industry:** ${selectedIndustry.toUpperCase()}\n`;
+      content += `- **Date Analyzed:** ${new Date().toLocaleDateString()}\n`;
+      content += `- **Regulatory Target:** Regulation (EU) 2024/1689\n\n`;
+      content += `## 1. Mapped Activities & Risk Classification\n\n`;
+
+      checkedData.forEach(item => {
+        content += `### Activity: ${item.text}\n`;
+        content += `- **Risk Level:** ${item.risk.toUpperCase()}\n`;
+        content += `- **Act Provision:** ${item.law}\n`;
+        content += `- **Context:** ${item.desc}\n\n`;
+      });
+
+      content += `## 2. Mandatory Compliance Checklist\n`;
+      content += `Depending on your risk classifications above, prepare the following evidence items:\n`;
+      content += `- [ ] **For Prohibited Practices:** Discontinue and restructure product specifications immediately.\n`;
+      content += `- [ ] **For High-Risk Systems:** Formulate complete Risk Management, Data Governance, and logging files.\n`;
+      content += `- [ ] **For Transparency Items:** Setup clear labels notifying users that they are talking with AI.\n`;
+
+      triggerDownload(content, `ai-act-business-profile-${selectedIndustry}.md`, 'text/markdown');
+    });
+
+    document.getElementById('btn-dl-business-json').addEventListener('click', () => {
+      const activities = database[selectedIndustry] || [];
+      const checkedData = activities.filter(a => letCheckedActivities.includes(a.id));
+
+      const report = {
+        industry: selectedIndustry,
+        analysisDate: new Date().toISOString(),
+        checkedActivities: checkedData.map(c => ({
+          id: c.id,
+          text: c.text,
+          risk: c.risk,
+          law: c.law,
+          context: c.desc
+        })),
+        toolkitVersion: '4.1.0'
+      };
+
+      triggerDownload(JSON.stringify(report, null, 2), `ai-act-business-profile-${selectedIndustry}.json`, 'application/json');
+    });
+  });
+</script>
+</body>
+</html>
