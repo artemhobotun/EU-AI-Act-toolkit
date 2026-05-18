@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EU AI Act Toolkit — Applicability Wizard</title>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">🇪🇺 EU AI Act Toolkit</a>
+    <nav class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="packs.html">Sector Packs</a>
+      <a href="quiz.html" class="active">Assessment</a>
+      <a href="roadmap.html">Roadmap</a>
+      <a href="resources.html">Resources</a>
+    </nav>
+    <div style="display: flex; gap: 16px; align-items: center; margin-left: 24px;">
+      <button id="search-btn" class="btn btn-outline" style="padding: 6px 12px; font-size: 13px; gap: 8px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        Search <span style="opacity: 0.5; font-size: 11px;">Cmd+K</span>
+      </button>
+      <button id="theme-toggle" style="background:none; border:none; color:inherit; cursor:pointer; padding:4px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero" style="text-align: center; margin-bottom: var(--s-8);">
+      <h1 class="hero-title">Applicability Assessment</h1>
+      <p class="hero-subtitle">Answer a few questions to determine your compliance obligations under the EU AI Act.</p>
+    </div>
+
+    <div class="wizard-container">
+      <div class="wizard-progress" id="wizard-progress">
+        <!-- Dots injected by JS -->
+      </div>
+
+      <div id="wizard-content">
+        <!-- Steps injected by JS -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="simple-footer">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <p><strong>EU AI Act Toolkit</strong> — Maintained by <a href="maintainer.html">Artem Nazarko</a>. Educational use only, not legal advice.</p>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div id="search-modal">
+    <div class="search-modal-content">
+      <div class="search-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="search-input" placeholder="Search templates, guidelines, terms... (Cmd+K)" autocomplete="off">
+      </div>
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </div>
+  <script src="assets/main.js"></script>
+  <script src="assets/wizard.js"></script>
+</body>
+</html>
