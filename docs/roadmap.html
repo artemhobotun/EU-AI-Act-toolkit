@@ -16,7 +16,66 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Compliance Roadmap — EU AI Act Toolkit">
   <meta name="twitter:description" content="Key EU AI Act enforcement milestones — 6, 12, 24 and 36 months.">
-  <meta name="twitter:image" content="https://artemhobotun.github.io/EU-AI-Act-Toolkit/assets/og-image.svg">
+  <style>
+    /* Custom Styles for Timeline Filtering */
+    .filter-btn {
+      transition: all var(--t-fast) !important;
+      cursor: pointer;
+    }
+    .filter-btn.active-filter {
+      background: var(--blue-500) !important;
+      border-color: var(--blue-500) !important;
+      color: #fff !important;
+      box-shadow: var(--shadow-blue);
+    }
+    .timeline-badge {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: var(--r-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: var(--s-3);
+    }
+    .badge-general {
+      background: rgba(59, 130, 246, 0.12);
+      color: var(--blue-400);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+    }
+    .badge-commission {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--gold-400);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+    .badge-memberstates {
+      background: rgba(139, 92, 246, 0.12);
+      color: #a78bfa;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .badge-providers {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .law-ref {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+      padding: 3px 8px;
+      border-radius: var(--r-sm);
+      margin-top: var(--s-3);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .roadmap-node {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .roadmap-node.hidden-node {
+      display: none !important;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -96,54 +155,292 @@
       </div>
     </div>
 
-    <div class="roadmap-timeline">
+    <!-- Premium Interactive Filtering Dashboard for Timeline -->
+    <div class="card" style="margin-bottom: var(--s-8); padding: var(--s-5); background: linear-gradient(135deg, rgba(13, 27, 42, 0.5), rgba(20, 39, 62, 0.7)); border: 1px solid var(--border-blue); border-radius: var(--r-xl); box-shadow: var(--shadow-blue);">
+      <div style="display: flex; flex-direction: column; gap: var(--s-4);">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--s-3);">
+          <div>
+            <h3 style="margin: 0; font-size: var(--text-lg); font-weight: 700; color: #fff; line-height: 1.2;">Interactive Regulatory Timeline</h3>
+            <p style="margin: 4px 0 0 0; font-size: var(--text-xs); color: var(--text-muted); font-weight: 500;">Filter by specific compliance years or responsible actors to isolate critical deadlines.</p>
+          </div>
+          <!-- Download Timeline CTA Button -->
+          <a href="https://artificialintelligenceact.eu/wp-content/uploads/2024/08/AIA-Implementation-Timeline-1-August-2024-v2.png" target="_blank" rel="noopener" class="btn btn-outline btn-sm" style="font-size: 11px; display: inline-flex; align-items: center; gap: var(--s-2); border-color: rgba(59, 130, 246, 0.3); background: rgba(59, 130, 246, 0.05); color: #fff; text-transform: uppercase; font-weight: 700; padding: 6px 12px; height: auto;">
+            <span>📥 Download Original Timeline Infographic</span>
+          </a>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: var(--s-4); border-top: 1px solid rgba(255,255,255,0.06); padding-top: var(--s-4);">
+          <!-- Year Selector Buttons -->
+          <div style="display: flex; flex-direction: column; gap: var(--s-2); flex: 1; min-width: 250px;">
+            <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filter by Regulatory Phase</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="year-filters">
+              <button class="btn btn-sm btn-outline filter-btn active-filter" data-year="all" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">All Phases</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-year="2024" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">2024</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-year="2025" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">2025</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-year="2026" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">2026</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-year="2027" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">2027</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-year="future" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">2028 - 2031</button>
+            </div>
+          </div>
+
+          <!-- Actor Selector Buttons -->
+          <div style="display: flex; flex-direction: column; gap: var(--s-2); flex: 1.2; min-width: 280px;">
+            <span style="font-size: 10px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Filter by Primary Subject</span>
+            <div style="display: flex; flex-wrap: wrap; gap: 6px;" id="actor-filters">
+              <button class="btn btn-sm btn-outline filter-btn active-filter" data-actor="all" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">All Subjects</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-actor="general" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">⏱️ Application Scope</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-actor="commission" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">🇪🇺 EU Commission</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-actor="memberstates" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">🏛️ Member States</button>
+              <button class="btn btn-sm btn-outline filter-btn" data-actor="providers" style="padding: 4px 10px; font-size: 11px; height: auto; text-transform: none; letter-spacing: 0;">🏢 Businesses</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timeline Database -->
+    <div class="roadmap-timeline" id="timeline-container">
       
-      <div class="roadmap-node">
-        <div class="roadmap-dot"></div>
+      <!-- 2024 -->
+      <div class="roadmap-node" data-year="2024" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
         <div class="roadmap-content">
-          <div class="roadmap-date">August 2024</div>
-          <h3>Entry into Force</h3>
-          <p>The EU AI Act officially enters into force 20 days after its publication in the Official Journal.</p>
+          <div class="roadmap-date">August 1, 2024</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>Regulatory Entry into Force</h3>
+          <p>The EU AI Act formally becomes active as a binding European regulation. While initial compliance duties are not yet mandatory, this sets the baseline calendar from which all staggered transitional timelines are officially calculated.</p>
+          <span class="law-ref">Article 113</span>
         </div>
       </div>
 
-      <div class="roadmap-node">
-        <div class="roadmap-dot"></div>
+      <div class="roadmap-node" data-year="2024" data-actor="memberstates">
+        <div class="roadmap-dot" style="border-color: #8b5cf6;"></div>
         <div class="roadmap-content">
-          <div class="roadmap-date">+6 Months (February 2025)</div>
-          <h3>Prohibited Practices Banned</h3>
-          <p>Unacceptable risk systems (like social scoring, manipulative AI, and untargeted facial recognition scraping) must be completely phased out.</p>
+          <div class="roadmap-date">November 2, 2024</div>
+          <span class="timeline-badge badge-memberstates">Member States</span>
+          <h3>Fundamental Rights Protection Mapping</h3>
+          <p>All EU Member States must identify and establish public authorities and agencies responsible for protecting fundamental human rights under the Act's provisions. These bodies must be declared to the EU Commission.</p>
+          <span class="law-ref">Article 77(2)</span>
         </div>
       </div>
 
-      <div class="roadmap-node">
-        <div class="roadmap-dot"></div>
+      <!-- 2025 -->
+      <div class="roadmap-node" data-year="2025" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
         <div class="roadmap-content">
-          <div class="roadmap-date">+12 Months (August 2025)</div>
-          <h3>General Purpose AI (GPAI) Rules Apply</h3>
-          <p>Providers of GPAI models must comply with transparency, copyright, and systemic risk assessment obligations.</p>
+          <div class="roadmap-date">February 2, 2025</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>Unacceptable Risk Market Bans</h3>
+          <p>Strict European market prohibitions go into active effect. AI systems deemed as presenting unacceptable societal risks (e.g., social scoring, cognitive manipulation, facial biometric scraping) are permanently banned. Organizations must also begin workplace AI literacy training.</p>
+          <span class="law-ref">Article 113(a) & Recital 179</span>
         </div>
       </div>
 
-      <div class="roadmap-node">
-        <div class="roadmap-dot"></div>
+      <div class="roadmap-node" data-year="2025" data-actor="commission">
+        <div class="roadmap-dot" style="border-color: var(--gold-400);"></div>
         <div class="roadmap-content">
-          <div class="roadmap-date">+24 Months (August 2026)</div>
-          <h3>High-Risk Systems (Annex III) Rules Apply</h3>
-          <p>Full compliance required for high-risk AI systems listed in Annex III (biometrics, critical infrastructure, HR, law enforcement). Fines become fully applicable.</p>
+          <div class="roadmap-date">May 2, 2025</div>
+          <span class="timeline-badge badge-commission">EU Commission</span>
+          <h3>Codes of Practice Finalization</h3>
+          <p>The European AI Office drafts the primary Codes of Practice. These documents outline the expected operational compliance metrics for providers of General-Purpose AI (GPAI) models ahead of upcoming structural audits.</p>
+          <span class="law-ref">Article 56(9)</span>
         </div>
       </div>
 
-      <div class="roadmap-node">
-        <div class="roadmap-dot"></div>
+      <div class="roadmap-node" data-year="2025" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
         <div class="roadmap-content">
-          <div class="roadmap-date">+36 Months (August 2027)</div>
-          <h3>High-Risk Systems (Annex II) Rules Apply</h3>
-          <p>Obligations apply to high-risk AI systems that are already regulated under existing EU harmonization legislation (e.g., medical devices, machinery, toys).</p>
+          <div class="roadmap-date">August 2, 2025</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>GPAI Model Rules & Governance Launch</h3>
+          <p>Regulatory frameworks activate. Obligations for General-Purpose AI (GPAI) model providers become legally binding. Rules regarding Notified Bodies (independent conformity assessment agencies), confidentiality provisions, and penalty rules also become active.</p>
+          <span class="law-ref">Article 113(b)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="2025" data-actor="providers">
+        <div class="roadmap-dot" style="border-color: #10b981;"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2025</div>
+          <span class="timeline-badge badge-providers">Businesses</span>
+          <h3>Legacy GPAI Transition Window Starts</h3>
+          <p>General-Purpose AI models that were already actively deployed or placed on the European market prior to August 2025 are granted a two-year transitional compliance runway, setting their ultimate compliance deadline to August 2, 2027.</p>
+          <span class="law-ref">Article 111(3)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="2025" data-actor="memberstates">
+        <div class="roadmap-dot" style="border-color: #8b5cf6;"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2025</div>
+          <span class="timeline-badge badge-memberstates">Member States</span>
+          <h3>Designating National Supervisory Authorities</h3>
+          <p>Each EU member country must formally designate national competent authorities, identifying their respective notifying authorities and market surveillance authorities to handle local oversight and report to the central Commission.</p>
+          <span class="law-ref">Article 70(2)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="2025" data-actor="memberstates">
+        <div class="roadmap-dot" style="border-color: #8b5cf6;"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2025</div>
+          <span class="timeline-badge badge-memberstates">Member States</span>
+          <h3>Fines & Penalty Systems Codification</h3>
+          <p>Member States must draft and formalize local penalty structures and administrative fine parameters to discipline violations of the regulation, communicating the implemented systems directly to the EU Commission.</p>
+          <span class="law-ref">Recital 179</span>
+        </div>
+      </div>
+
+      <!-- 2026 -->
+      <div class="roadmap-node" data-year="2026" data-actor="commission">
+        <div class="roadmap-dot" style="border-color: var(--gold-400);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">February 2, 2026</div>
+          <span class="timeline-badge badge-commission">EU Commission</span>
+          <h3>High-Risk Post-Market Tracking Guidelines</h3>
+          <p>The European Commission publishes explicit operational guidelines clarifying high-risk AI system categorizations and setting post-market tracking parameters for providers of complex systems.</p>
+          <span class="law-ref">Article 6(5) & Article 72(3)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="2026" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2026</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>Annex III High-Risk Systems Application</h3>
+          <p>Enforcement extends to high-risk systems under Annex III. This triggers compliance protocols for biometrics, infrastructure, employment/HR, and law enforcement applications. Additionally, all Member States must establish at least one operational national sandbox.</p>
+          <span class="law-ref">Article 113 & Article 57(1)</span>
+        </div>
+      </div>
+
+      <!-- 2027 -->
+      <div class="roadmap-node" data-year="2027" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2027</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>Annex II Safety-Regulated AI Activation</h3>
+          <p>High-risk classification standards under Article 6(1) apply. This includes AI integrated as safety components of products already regulated under EU safety directives (e.g., medical equipment, industrial machinery, transportation safety devices).</p>
+          <span class="law-ref">Article 113</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="2027" data-actor="providers">
+        <div class="roadmap-dot" style="border-color: #10b981;"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2027</div>
+          <span class="timeline-badge badge-providers">Businesses</span>
+          <h3>Legacy GPAI Model Alignment Deadline</h3>
+          <p>The grace transition period expires. All legacy GPAI models on the market before August 2025 must now be fully compliant with transparency, documentation, and data-governance standards.</p>
+          <span class="law-ref">Article 111(3)</span>
+        </div>
+      </div>
+
+      <!-- 2028 - 2031 (future) -->
+      <div class="roadmap-node" data-year="future" data-actor="commission">
+        <div class="roadmap-dot" style="border-color: var(--gold-400);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2028</div>
+          <span class="timeline-badge badge-commission">EU Commission</span>
+          <h3>AI Office Effectiveness Assessment</h3>
+          <p>The Commission completes a performance and governance evaluation of the European AI Office, analyzing institutional effectiveness. Concurrently, a progress review evaluates energy-efficient model standards and voluntary industry codes of conduct.</p>
+          <span class="law-ref">Article 112(5) & Article 112(7)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="future" data-actor="commission">
+        <div class="roadmap-dot" style="border-color: var(--gold-400);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2029</div>
+          <span class="timeline-badge badge-commission">EU Commission</span>
+          <h3>First Structural Regulatory Review</h3>
+          <p>A comprehensive review of the AI Act is prepared for the European Parliament. This covers critical reassessments of Annex III high-risk boundaries, transparency measures, and the Commission's delegate powers to modify annexes.</p>
+          <span class="law-ref">Article 112(3) & Article 97(2)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="future" data-actor="general">
+        <div class="roadmap-dot" style="border-color: var(--blue-500);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2030</div>
+          <span class="timeline-badge badge-general">General Enforcement</span>
+          <h3>Public Sector High-Risk AI Deadline</h3>
+          <p>High-risk AI systems implemented by public bodies and administrative agencies must reach complete compliance. Additionally, components of EU large-scale information platforms (Annex X) must be modernized to match the AI Act by December 31, 2030.</p>
+          <span class="law-ref">Article 111(2) & Article 111(1)</span>
+        </div>
+      </div>
+
+      <div class="roadmap-node" data-year="future" data-actor="commission">
+        <div class="roadmap-dot" style="border-color: var(--gold-400);"></div>
+        <div class="roadmap-content">
+          <div class="roadmap-date">August 2, 2031</div>
+          <span class="timeline-badge badge-commission">EU Commission</span>
+          <h3>Legislative Enforcement Performance Audit</h3>
+          <p>The European Commission presents its first formal performance audit on the practical enforcement of the AI Act to legislative authorities, concluding the multi-year implementation cycle with a comprehensive evaluation report.</p>
+          <span class="law-ref">Article 112(13)</span>
         </div>
       </div>
 
     </div>
+
+    <!-- Timeline Interactive Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const yearButtons = document.querySelectorAll('#year-filters .filter-btn');
+        const actorButtons = document.querySelectorAll('#actor-filters .filter-btn');
+        const nodes = document.querySelectorAll('#timeline-container .roadmap-node');
+
+        let activeYear = 'all';
+        let activeActor = 'all';
+
+        function updateTimelineFilter() {
+          let visibleCount = 0;
+          nodes.forEach(node => {
+            const nodeYear = node.getAttribute('data-year');
+            const nodeActor = node.getAttribute('data-actor');
+
+            const yearMatch = (activeYear === 'all' || nodeYear === activeYear);
+            const actorMatch = (activeActor === 'all' || nodeActor === activeActor);
+
+            if (yearMatch && actorMatch) {
+              node.classList.remove('hidden-node');
+              node.style.opacity = 0;
+              node.style.transform = 'translateY(15px)';
+              visibleCount++;
+              
+              // Fade back in smoothly with dynamic staggered delay
+              setTimeout(() => {
+                node.style.opacity = 1;
+                node.style.transform = 'translateY(0)';
+              }, 50 + (visibleCount * 30));
+            } else {
+              node.classList.add('hidden-node');
+            }
+          });
+        }
+
+        // Year Filters
+        yearButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            yearButtons.forEach(b => b.classList.remove('active-filter'));
+            btn.classList.add('active-filter');
+            activeYear = btn.getAttribute('data-year');
+            updateTimelineFilter();
+          });
+        });
+
+        // Actor Filters
+        actorButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            actorButtons.forEach(b => b.classList.remove('active-filter'));
+            btn.classList.add('active-filter');
+            activeActor = btn.getAttribute('data-actor');
+            updateTimelineFilter();
+          });
+        });
+      });
+    </script>
   </main>
 
   <footer class="simple-footer">
