@@ -1,8 +1,35 @@
 cff-version: 1.2.0
-title: EU AI Act Toolkit
+message: "If you use this toolkit in research or professional work, please cite it."
+title: "EU AI Act Toolkit"
+abstract: >
+  A comprehensive, open-source toolkit providing practical templates, checklists,
+  and governance documentation for organisations working toward EU AI Act readiness.
+  Covers High-Risk AI systems, GPAI models, sector-specific packs (Healthcare, Finance,
+  HR, Marketing), vendor due diligence, and compliance roadmaps. Designed for SMEs,
+  legal professionals, and compliance teams — not a substitute for legal advice.
 authors:
   - family-names: Nazarko
     given-names: Artem
+    orcid: https://orcid.org/0000-0002-4190-7288
+    affiliation: "Independent Legal Researcher & AI Governance Practitioner"
 license: MIT
 repository-code: https://github.com/artemhobotun/EU-AI-Act-Toolkit
-abstract: Practical EU AI Act readiness toolkit for SMEs.
+url: https://artemhobotun.github.io/EU-AI-Act-Toolkit/
+version: "4.1.0"
+date-released: "2026-05-18"
+keywords:
+  - eu-ai-act
+  - artificial-intelligence
+  - ai-governance
+  - compliance
+  - legal-tech
+  - gdpr
+  - regulatory-compliance
+  - templates
+  - checklists
+  - sme
+  - gpai
+  - high-risk-ai
+  - ai-regulation
+  - open-source
+type: software

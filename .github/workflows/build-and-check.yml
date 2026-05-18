@@ -9,6 +9,7 @@ on:
       - 'toolkit/**/*.md'
       - 'scratch/build-*.js'
       - 'scratch/validate-*.js'
+      - 'scratch/bump-*.js'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +37,9 @@ jobs:
 
       - name: Build API JSONs (with front-matter metadata)
         run: node scratch/build-api.js
+
+      - name: Build Template Versions snapshot
+        run: node scratch/build-versions.js
 
       - name: Check for broken internal links
         run: node scratch/check-links.js
