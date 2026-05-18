@@ -1,3 +1,13 @@
+---
+title: "Vendor Red Flags Checklist"
+category: "vendor"
+applies_to: ["Deployer", "Provider"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Vendor Red Flags Checklist
 
 Use this checklist to spot vendor issues that may need escalation.

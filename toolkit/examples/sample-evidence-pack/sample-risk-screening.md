@@ -1,3 +1,13 @@
+---
+title: "Sample Risk Screening"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 9"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sample Risk Screening
 
 This is fictional sample content only.

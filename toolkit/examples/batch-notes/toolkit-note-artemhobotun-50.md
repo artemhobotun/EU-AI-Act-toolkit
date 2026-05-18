@@ -1,3 +1,13 @@
+---
+title: "Toolkit Note Artemhobotun 50"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Toolkit note 50
 
 This note records a small EU AI Act SME Toolkit improvement.

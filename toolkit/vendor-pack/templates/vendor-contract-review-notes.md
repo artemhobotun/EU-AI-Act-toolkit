@@ -1,3 +1,13 @@
+---
+title: "Vendor Contract Review Notes"
+category: "vendor"
+applies_to: ["Deployer", "Provider"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Vendor Contract Review Notes
 
 These notes help prepare questions for qualified review. They are not legal advice.

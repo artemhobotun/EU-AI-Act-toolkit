@@ -1,3 +1,13 @@
+---
+title: "Example Vendor Review Support Chatbot"
+category: "vendor"
+applies_to: ["Deployer", "Provider"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Example vendor review: support chatbot
 
 This is a fictional sample only.

@@ -1,4 +1,4 @@
-name: Build Search and API
+name: Build, Check & Lint
 
 on:
   push:
@@ -33,8 +33,15 @@ jobs:
       - name: Build API JSONs
         run: node scratch/build-api.js
 
-      - name: Check for broken links
+      - name: Check for broken internal links
         run: node scratch/check-links.js
+
+      - name: Lint Markdown files
+        run: |
+          npx --yes markdownlint-cli \
+            --config .markdownlint.json \
+            'toolkit/**/*.md' \
+            --ignore 'toolkit/**/README.md'
 
       - name: Auto-commit generated files
         uses: stefanzweifel/git-auto-commit-action@v5

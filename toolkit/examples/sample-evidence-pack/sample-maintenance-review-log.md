@@ -1,3 +1,13 @@
+---
+title: "Sample Maintenance Review Log"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 73"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sample Maintenance Review Log
 
 This is fictional sample content only.

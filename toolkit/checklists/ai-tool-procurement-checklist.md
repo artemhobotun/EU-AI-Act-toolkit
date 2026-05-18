@@ -1,3 +1,13 @@
+---
+title: "Ai Tool Procurement Checklist"
+category: "checklist"
+applies_to: ["All"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI Tool Procurement Checklist
 
 Use this checklist before buying, renewing, or enabling a new AI tool or AI feature.

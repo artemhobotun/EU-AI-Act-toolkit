@@ -1,3 +1,13 @@
+---
+title: "Vendor Ai Questionnaire"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Vendor AI Questionnaire (Template)
 
 Use this questionnaire when procuring or renewing an AI tool, model API, or AI-enabled SaaS feature.

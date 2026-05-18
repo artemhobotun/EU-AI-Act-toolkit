@@ -1,3 +1,13 @@
+---
+title: "Employee Ai Literacy Record"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 4"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Employee AI Literacy Record (Template)
 
 This template helps track basic AI literacy onboarding for staff who use AI tools at work.

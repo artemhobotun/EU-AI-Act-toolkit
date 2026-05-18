@@ -1,3 +1,13 @@
+---
+title: "Sample Ai Use Policy Excerpt"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 9, 29"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sample AI Use Policy Excerpt
 
 This is fictional sample content only.

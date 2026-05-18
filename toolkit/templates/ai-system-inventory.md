@@ -1,3 +1,13 @@
+---
+title: "Ai System Inventory"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 11, 12"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI System Inventory Entry (Template)
 
 ## 1. Basic Info

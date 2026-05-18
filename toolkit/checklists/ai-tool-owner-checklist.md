@@ -1,3 +1,13 @@
+---
+title: "Ai Tool Owner Checklist"
+category: "checklist"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI Tool Owner Checklist
 
 A practical checklist for the person responsible for an AI tool or AI-enabled workflow inside a small organisation.

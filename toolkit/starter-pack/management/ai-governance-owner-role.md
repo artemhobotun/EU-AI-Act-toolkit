@@ -1,3 +1,13 @@
+---
+title: "Ai Governance Owner Role"
+category: "starter"
+applies_to: ["All"]
+eu_ai_act_article: "Article 9"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI Governance Owner Role
 
 Lightweight SME roles:

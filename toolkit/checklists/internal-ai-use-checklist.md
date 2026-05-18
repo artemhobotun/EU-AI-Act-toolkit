@@ -1,3 +1,13 @@
+---
+title: "Internal Ai Use Checklist"
+category: "checklist"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Internal AI Use Checklist
 
 Use this checklist when enabling or expanding internal use of AI tools (including genAI).

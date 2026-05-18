@@ -1,3 +1,13 @@
+---
+title: "Hr Candidate Screening"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 9"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Use case: HR candidate screening
 
 ## Scenario

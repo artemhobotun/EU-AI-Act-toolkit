@@ -282,6 +282,36 @@
     "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/examples/use-cases/vendor-ai-tool-procurement.md"
   },
   {
+    "id": "copyright-policy-template",
+    "name": "copyright policy template",
+    "path": "toolkit/gpai-pack/copyright-policy-template.md",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/copyright-policy-template.md"
+  },
+  {
+    "id": "gpai-model-inventory",
+    "name": "gpai model inventory",
+    "path": "toolkit/gpai-pack/gpai-model-inventory.md",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/gpai-model-inventory.md"
+  },
+  {
+    "id": "systemic-risk-assessment",
+    "name": "systemic risk assessment",
+    "path": "toolkit/gpai-pack/systemic-risk-assessment.md",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/systemic-risk-assessment.md"
+  },
+  {
+    "id": "technical-documentation-template",
+    "name": "technical documentation template",
+    "path": "toolkit/gpai-pack/technical-documentation-template.md",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/technical-documentation-template.md"
+  },
+  {
+    "id": "transparency-disclosure-template",
+    "name": "transparency disclosure template",
+    "path": "toolkit/gpai-pack/transparency-disclosure-template.md",
+    "github_url": "https://github.com/artemhobotun/EU-AI-Act-Toolkit/blob/main/toolkit/gpai-pack/transparency-disclosure-template.md"
+  },
+  {
     "id": "customer-support-chatbots",
     "name": "customer support chatbots",
     "path": "toolkit/sector-packs/customer-support-chatbots.md",

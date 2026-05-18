@@ -1,3 +1,13 @@
+---
+title: "START HERE"
+category: "starter"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Start Here
 
 If you only have 30 minutes:

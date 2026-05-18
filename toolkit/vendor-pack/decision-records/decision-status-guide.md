@@ -1,3 +1,13 @@
+---
+title: "Decision Status Guide"
+category: "vendor"
+applies_to: ["Deployer", "Provider"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Decision Status Guide
 
 ## Approved

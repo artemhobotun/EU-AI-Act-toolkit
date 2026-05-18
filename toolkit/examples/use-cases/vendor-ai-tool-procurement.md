@@ -1,3 +1,13 @@
+---
+title: "Vendor Ai Tool Procurement"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Use case: Vendor AI tool procurement
 
 ## Scenario

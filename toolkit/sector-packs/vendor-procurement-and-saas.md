@@ -1,3 +1,13 @@
+---
+title: "Vendor Procurement And Saas"
+category: "sector-pack"
+applies_to: ["Sector-Specific"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sector pack: Vendor procurement and SaaS
 
 ## Typical SME use cases

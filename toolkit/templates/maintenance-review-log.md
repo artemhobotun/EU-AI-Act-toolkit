@@ -1,3 +1,13 @@
+---
+title: "Maintenance Review Log"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 73"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Maintenance Review Log
 
 Review date:

@@ -1,3 +1,13 @@
+---
+title: "Sme Ai Act Readiness Checklist"
+category: "checklist"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # SME EU AI Act Readiness Checklist
 
 This checklist is a practical starting point for small organizations. It is not a guarantee of compliance. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).

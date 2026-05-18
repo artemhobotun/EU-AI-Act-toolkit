@@ -1,3 +1,13 @@
+---
+title: "Marketing And Sales"
+category: "sector-pack"
+applies_to: ["Sector-Specific"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sector pack: Marketing and sales
 
 ## Typical SME use cases

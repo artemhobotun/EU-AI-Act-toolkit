@@ -1,3 +1,13 @@
+---
+title: "Ai Incident Log"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 73"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI Incident Log (Template)
 
 Use this log to track AI-related incidents, near-misses, and material issues. Do not store unnecessary personal data here.

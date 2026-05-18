@@ -1,3 +1,13 @@
+---
+title: "Ai Use Policy Template"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 9, 29"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Internal AI Use Policy (Template)
 
 Owner:

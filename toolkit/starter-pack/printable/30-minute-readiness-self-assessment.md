@@ -1,3 +1,13 @@
+---
+title: "30 Minute Readiness Self Assessment"
+category: "starter"
+applies_to: ["All"]
+eu_ai_act_article: "Article 9, 10"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # 30-Minute AI Readiness Self-Assessment
 
 ## Purpose

@@ -1,3 +1,13 @@
+---
+title: "Employee Ai Use Quick Guide"
+category: "starter"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Employee AI Use Quick Guide
 
 - permitted uses: drafting, summarising, translation, brainstorming, and internal support tasks when approved

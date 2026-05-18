@@ -1,3 +1,13 @@
+---
+title: "EXAMPLE_PROGRESS_NOTE"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "General"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Example toolkit progress note
 
 This note shows a lightweight format for recording a small practical improvement while using the EU AI Act SME Toolkit.

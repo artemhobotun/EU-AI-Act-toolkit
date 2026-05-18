@@ -1,3 +1,13 @@
+---
+title: "Ai Risk Screening Form"
+category: "template"
+applies_to: ["High-Risk", "General"]
+eu_ai_act_article: "Article 9"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # AI Risk Screening Form (Template)
 
 This form is a lightweight starting point to identify where deeper review may be needed. It is not a legal determination. See [../../docs/DISCLAIMER.md](../../docs/DISCLAIMER.md).

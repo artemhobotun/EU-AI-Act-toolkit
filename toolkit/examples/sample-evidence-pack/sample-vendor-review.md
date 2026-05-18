@@ -1,3 +1,13 @@
+---
+title: "Sample Vendor Review"
+category: "example"
+applies_to: ["All"]
+eu_ai_act_article: "Article 13, 25"
+status: "current"
+last_reviewed: "2026-05"
+version: "1.0"
+---
+
 # Sample Vendor Review
 
 This is fictional sample content only.
