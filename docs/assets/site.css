@@ -530,9 +530,11 @@ nav a.nav-cta:hover {
 
 .cards-grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--s-4);
 }
+@media (max-width: 900px) { .cards-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .cards-grid-3 { grid-template-columns: 1fr; } }
 
 .cards-grid-2 {
   display: grid;
@@ -615,6 +617,7 @@ nav a.nav-cta:hover {
   font-weight: 600;
   padding: 3px var(--s-3);
   border-radius: var(--r-full);
+  width: fit-content;
 }
 
 .badge-blue  { background: var(--blue-100);  color: var(--blue-300);  border: 1px solid rgba(47,107,255,0.20); }
